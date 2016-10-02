@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "Engagement",
+  "title": "Engagement",
+  "type": "object",
+  "properties": {
+    "$key": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "assignmentCount": {
+      "type": "number"
+    },
+    "declined": {
+      "type": "boolean"
+    },
+    "isAccepted": {
+      "type": "boolean"
+    },
+    "isApplied": {
+      "type": "boolean"
+    },
+    "isAssigned": {
+      "type": "boolean"
+    },
+    "isConfirmed": {
+      "type": "boolean"
+    },
+    "isPaid": {
+      "type": "boolean"
+    },
+    "oppKey": {
+      "type": "string"
+    },
+    "payment": {
+      "type": "object",
+      "$ref": "#/definitions/payment"
+    },
+    "depositAmount": {
+      "type": "string"
+    },
+    "isDepositPaid": {
+      "type": "boolean"
+    },
+    "deposit": {
+      "type": "object",
+      "$ref": "#/definitions/deposit"
+    },
+    "paymentClientToken": {
+      "description": "deprecated",
+      "type": "string"
+    },
+    "paymentError": {
+      "description": "deprecated",
+      "type": "boolean"
+    },
+    "priority": {
+      "type": "boolean"
+    },
+    "profileKey": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "$key",
+    "answer",
+    "assignmentCount",
+    "declined",
+    "isAccepted",
+    "isApplied",
+    "isAssigned",
+    "isConfirmed",
+    "isPaid",
+    "oppKey",
+    "payment",
+    "priority",
+    "profileKey"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "payment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "clientToken": {
+          "type": "string"
+        },
+        "gatewayId": {
+          "type": "string"
+        },
+        "transactionId": {
+          "type": "string"
+        },
+        "subscriptionId": {
+          "type": "string"
+        },
+        "error": {
+          "type": "boolean"
+        },
+        "amountPaid": {
+          "type": "string"
+        },
+        "paidAt": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "clientToken",
+        "gatewayId"
+      ]
+    },
+    "deposit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "billingDate": {
+          "type": "string"
+        },
+        "paymentError": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
