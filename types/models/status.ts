@@ -1,7 +1,4 @@
-
-
 export interface Status {
-
   amount: string;
   status: string;
   timestamp: string;

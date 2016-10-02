@@ -1,7 +1,4 @@
-
-
 export interface CreditCard {
-
   bin: number;
   cardType: string;
   commercial: string;
@@ -20,5 +17,5 @@ export interface CreditCard {
   payroll: string;
   prepaid: string;
   productId: string;
-  venmoSdk: boolean
+  venmoSdk: boolean;
 }

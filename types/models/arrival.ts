@@ -5,4 +5,3 @@ export interface Arrival {
   projectKey: string;
   projectKeyProfileKey?: string;
 }
-

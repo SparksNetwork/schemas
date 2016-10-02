@@ -1,7 +1,4 @@
-
-
 export interface Membership {
-
   answer: string;
   engagementKey: string;
   isAccepted: boolean;

@@ -1,7 +1,4 @@
-
-
 export interface Shift {
-
   assigned: number;
   date: string;
   end: string;

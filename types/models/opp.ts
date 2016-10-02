@@ -1,5 +1,3 @@
-
-
 export interface Opp {
   authorProfileKey: string;
   confirmationsOn: boolean;

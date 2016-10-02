@@ -16,7 +16,7 @@ do
 
         read -p "Overwrite (y/n)? " yn < /dev/tty
         case $yn in
-            [Yy]* ) echo "${T}" > "$O"; break;;
+            [Yy]* ) echo "${T}" > "$O";;
             * ) echo "Skipping ${f}";;
         esac
     fi

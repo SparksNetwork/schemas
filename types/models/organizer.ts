@@ -1,5 +1,3 @@
-
-
 export interface Organizer {
   authority: string;
   authorProfileKey: string;

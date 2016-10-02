@@ -1,8 +1,4 @@
-
-
-
 export interface Team {
-
   authorProfileKey: string;
   description: string;
   name: string;
