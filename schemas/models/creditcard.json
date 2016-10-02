@@ -1,0 +1,85 @@
+{
+  "id": "CreditCard",
+  "type": "object",
+  "properties": {
+    "bin": {
+      "type": "number"
+    },
+    "cardType": {
+      "type": "string"
+    },
+    "commercial": {
+      "type": "string"
+    },
+    "countryOfIssuance": {
+      "type": "string"
+    },
+    "customerLocation": {
+      "type": "string"
+    },
+    "debit": {
+      "type": "string"
+    },
+    "durbinRegulated": {
+      "type": "string"
+    },
+    "expirationDate": {
+      "type": "string"
+    },
+    "expirationMonth": {
+      "type": "string"
+    },
+    "expirationYear": {
+      "type": "string"
+    },
+    "healthcare": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "issuingBank": {
+      "type": "string"
+    },
+    "last4": {
+      "type": "number"
+    },
+    "maskedNumber": {
+      "type": "string"
+    },
+    "payroll": {
+      "type": "string"
+    },
+    "prepaid": {
+      "type": "string"
+    },
+    "productId": {
+      "type": "string"
+    },
+    "venmoSdk": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "bin",
+    "cardType",
+    "commercial",
+    "countryOfIssuance",
+    "customerLocation",
+    "debit",
+    "durbinRegulated",
+    "expirationDate",
+    "expirationMonth",
+    "expirationYear",
+    "healthcare",
+    "imageUrl",
+    "issuingBank",
+    "last4",
+    "maskedNumber",
+    "payroll",
+    "prepaid",
+    "productId",
+    "venmoSdk"
+  ],
+  "additionalProperties": false
+}

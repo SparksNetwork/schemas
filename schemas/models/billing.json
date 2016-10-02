@@ -1,0 +1,13 @@
+{
+  "id": "Billing",
+  "type": "object",
+  "properties": {
+    "postalCode": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "postalCode"
+  ],
+  "additionalProperties": false
+}

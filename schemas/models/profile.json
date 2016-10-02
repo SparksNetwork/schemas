@@ -1,0 +1,48 @@
+{
+  "id": "Profile",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "string"
+    },
+    "isAdmin": {
+      "type": "boolean"
+    },
+    "isConfirmed": {
+      "type": "boolean"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "portraitUrl": {
+      "type": "boolean"
+    },
+    "skills": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "string"
+    },
+    "isEAP": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "email",
+    "fullName",
+    "intro",
+    "isAdmin",
+    "isConfirmed",
+    "phone",
+    "portraitUrl",
+    "skills",
+    "uid"
+  ],
+  "additionalProperties": false
+}

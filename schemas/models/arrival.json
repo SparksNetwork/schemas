@@ -1,0 +1,27 @@
+{
+  "id": "Arrival",
+  "type": "object",
+  "properties": {
+    "arrivedAt": {
+      "type": "number"
+    },
+    "ownerProfileKey": {
+      "type": "string"
+    },
+    "profileKey": {
+      "type": "string"
+    },
+    "projectKey": {
+      "type": "string"
+    },
+    "projectKeyProfileKey": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "ownerProfileKey",
+    "profileKey",
+    "projectKey"
+  ],
+  "additionalProperties": false
+}

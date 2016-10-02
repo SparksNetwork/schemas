@@ -1,0 +1,29 @@
+{
+  "id": "Team",
+  "type": "object",
+  "properties": {
+    "authorProfileKey": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "projectKey": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "authorProfileKey",
+    "description",
+    "name",
+    "projectKey",
+    "question"
+  ],
+  "additionalProperties": false
+}

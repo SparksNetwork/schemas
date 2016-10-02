@@ -1,0 +1,37 @@
+{
+  "id": "Opp",
+  "type": "object",
+  "properties": {
+    "authorProfileKey": {
+      "type": "string"
+    },
+    "confirmationsOn": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string"
+    },
+    "isPublic": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "projectKey": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "authorProfileKey",
+    "confirmationsOn",
+    "description",
+    "isPublic",
+    "name",
+    "projectKey",
+    "question"
+  ],
+  "additionalProperties": false
+}

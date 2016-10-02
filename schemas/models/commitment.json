@@ -1,0 +1,25 @@
+{
+  "id": "Commitment",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "count": {
+      "type": "number"
+    },
+    "oppKey": {
+      "type": "string"
+    },
+    "party": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "code",
+    "count",
+    "oppKey",
+    "party"
+  ],
+  "additionalProperties": false
+}
