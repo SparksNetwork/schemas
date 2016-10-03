@@ -4,6 +4,7 @@
       "es2015"
     ],
     "module": "commonjs",
-    "target": "ES6"
+    "target": "ES6",
+    "declaration": true
   }
 }
