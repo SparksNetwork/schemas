@@ -6,7 +6,7 @@
     "properties": {
       "values": {
         "type": "object",
-        "$ref": "models.Arrival"
+        "$ref": "models/arrival"
       }
     },
     "requiredProperties": ["values"]
