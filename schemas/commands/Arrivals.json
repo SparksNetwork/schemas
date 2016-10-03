@@ -9,7 +9,7 @@
         "$ref": "models/arrival"
       }
     },
-    "requiredProperties": ["values"]
+    "required": ["values"]
   },
   "remove": {
     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -18,6 +18,6 @@
     "properties": {
       "key": {"type": "string"}
     },
-    "requiredProperties": ["key"]
+    "required": ["key"]
   }
 }
