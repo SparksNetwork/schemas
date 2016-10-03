@@ -10,11 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-schema-to-typescript": "^2.4.1",
-    "typson": "^0.6.0"
   },
   "devDependencies": {
     "typescript": "^2.0.3",
-    "typings": "^1.4.0"
+    "typings": "^1.4.0",
+    "json-schema-to-typescript": "^2.4.1",
+    "typson": "^0.6.0"
   }
 }
