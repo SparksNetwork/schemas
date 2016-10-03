@@ -6,7 +6,19 @@
     "properties": {
       "values": {
         "type": "object",
-        "$ref": "models/arrival"
+        "properties": {
+          "arrivedAt": {
+            "type": "number"
+          },
+          "profileKey": {
+            "type": "string"
+          },
+          "projectKey": {
+            "type": "string"
+          }
+        },
+        "required": ["arrivedAt", "profileKey", "projectKey"],
+        "additionalProperties": false
       }
     },
     "required": ["values"]
