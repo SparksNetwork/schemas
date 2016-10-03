@@ -1,5 +1,5 @@
 {
-  "id": "Arrival",
+  "id": "models.Arrival",
   "type": "object",
   "properties": {
     "arrivedAt": {
