@@ -9,7 +9,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run build"
+      "pre-commit": "npm run build && git add index.d.ts"
     }
   },
   "author": "",
