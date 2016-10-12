@@ -1,6 +1,6 @@
 {
   "name": "sparks-schemas",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.d.ts",
   "typings": "index.d.ts",
@@ -15,8 +15,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "ajv": "^4.7.7",
     "cli-color": "^1.1.0",
