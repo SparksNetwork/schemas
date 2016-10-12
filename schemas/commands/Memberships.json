@@ -58,7 +58,7 @@
           },
           "isDeclined": {
             "type": "boolean"
-          },
+          }
         },
         "type": "object",
         "additionalProperties": false

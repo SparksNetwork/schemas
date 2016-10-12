@@ -4,7 +4,7 @@ export interface Shift {
   end: string;
   hours: number;
   ownerProfileKey: string;
-  peope: number;
+  people: number;
   reserved?: number;
   start: string;
   teamKey: string;

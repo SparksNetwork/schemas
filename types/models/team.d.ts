@@ -1,7 +1,7 @@
 export interface Team {
-    authorProfileKey: string;
-    description: string;
+    ownerProfileKey: string;
+    description?: string;
     name: string;
     projectKey: string;
-    question: string;
+    question?: string;
 }

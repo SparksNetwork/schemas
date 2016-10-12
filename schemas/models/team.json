@@ -21,7 +21,7 @@
   "required": [
     "ownerProfileKey",
     "name",
-    "projectKey",
+    "projectKey"
   ],
   "additionalProperties": false
 }

@@ -1,5 +1,5 @@
 export interface Project {
-    description: string;
+    description?: string;
     facebookImageUrl?: string;
     name: string;
     ownerProfileKey: string;

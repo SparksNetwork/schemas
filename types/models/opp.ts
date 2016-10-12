@@ -1,5 +1,5 @@
 export interface Opp {
-  authorProfileKey: string;
+  ownerProfileKey: string;
   confirmationsOn: boolean;
   description: string;
   isPublic: boolean;
