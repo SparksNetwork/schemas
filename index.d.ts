@@ -36,9 +36,18 @@ declare module 'sparks-schemas/types/models/billing' {
 declare module 'sparks-schemas/types/models/commitment' {
 	export interface Commitment {
 	    code: string;
-	    count: number;
 	    oppKey: string;
-	    party: string;
+	    count?: number;
+	    description?: string;
+	    allocationRule?: string;
+	    amount?: number;
+	    party?: string;
+	    who?: string;
+	    ticketType?: string;
+	    retailValue?: number;
+	    what?: string;
+	    minLength?: number;
+	    maxLength?: number;
 	}
 
 }
@@ -110,9 +119,15 @@ declare module 'sparks-schemas/types/models/engagement' {
 }
 declare module 'sparks-schemas/types/models/fulfiller' {
 	export interface Fulfiller {
-	    authorProfileKey: string;
 	    oppKey: string;
 	    teamKey: string;
+	}
+
+}
+declare module 'sparks-schemas/types/models/gatewaycustomer' {
+	export interface GatewayCustomer {
+	    gatewayId: string;
+	    profileKey: string;
 	}
 
 }
@@ -131,7 +146,7 @@ declare module 'sparks-schemas/types/models/membership' {
 }
 declare module 'sparks-schemas/types/models/opp' {
 	export interface Opp {
-	    authorProfileKey: string;
+	    ownerProfileKey: string;
 	    confirmationsOn: boolean;
 	    description: string;
 	    isPublic: boolean;
@@ -144,11 +159,10 @@ declare module 'sparks-schemas/types/models/opp' {
 declare module 'sparks-schemas/types/models/organizer' {
 	export interface Organizer {
 	    authority: string;
-	    authorProfileKey: string;
 	    inviteEmail: string;
 	    projectKey: string;
 	    acceptedAt?: number;
-	    invitedByProfileKey?: string;
+	    invitedByProfileKey: string;
 	    isAccepted?: boolean;
 	    profileKey?: string;
 	}
@@ -171,7 +185,7 @@ declare module 'sparks-schemas/types/models/profile' {
 }
 declare module 'sparks-schemas/types/models/project' {
 	export interface Project {
-	    description: string;
+	    description?: string;
 	    facebookImageUrl?: string;
 	    name: string;
 	    ownerProfileKey: string;
@@ -191,7 +205,7 @@ declare module 'sparks-schemas/types/models/shift' {
 	    end: string;
 	    hours: number;
 	    ownerProfileKey: string;
-	    peope: number;
+	    people: number;
 	    reserved?: number;
 	    start: string;
 	    teamKey: string;
@@ -210,11 +224,11 @@ declare module 'sparks-schemas/types/models/status' {
 }
 declare module 'sparks-schemas/types/models/team' {
 	export interface Team {
-	    authorProfileKey: string;
-	    description: string;
+	    ownerProfileKey: string;
+	    description?: string;
 	    name: string;
 	    projectKey: string;
-	    question: string;
+	    question?: string;
 	}
 
 }

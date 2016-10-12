@@ -9,7 +9,7 @@ do
     if [[ ! -f "$O" ]]
     then
         echo "Converting $f"
-        ./schema2type.js $f | jq "." > "types/models/$N.ts"
+        ./bin/schema2type.js $f > "types/models/$N.ts"
     else
         echo $O
         echo "${T}" | diff $O -
