@@ -71,7 +71,8 @@
     "required": [
       "key",
       "values"
-    ]
+    ],
+    "additionalProperties": false
   },
   "remove": {
     "$schema": "http://json-schema.org/draft-04/schema#",

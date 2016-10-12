@@ -73,6 +73,7 @@
     "required": [
       "key",
       "values"
-    ]
+    ],
+    "additionalProperties": false
   }
 }

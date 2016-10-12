@@ -21,7 +21,8 @@
         "additionalProperties": false
       }
     },
-    "required": ["values"]
+    "required": ["values"],
+    "additionalProperties": false
   },
   "remove": {
     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -30,6 +31,7 @@
     "properties": {
       "key": {"type": "string"}
     },
-    "required": ["key"]
+    "required": ["key"],
+    "additionalProperties": false
   }
 }
