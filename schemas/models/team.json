@@ -2,7 +2,7 @@
   "id": "Team",
   "type": "object",
   "properties": {
-    "authorProfileKey": {
+    "ownerProfileKey": {
       "type": "string"
     },
     "description": {
@@ -19,11 +19,9 @@
     }
   },
   "required": [
-    "authorProfileKey",
-    "description",
+    "ownerProfileKey",
     "name",
     "projectKey",
-    "question"
   ],
   "additionalProperties": false
 }

@@ -2,9 +2,6 @@
   "id": "Fulfiller",
   "type": "object",
   "properties": {
-    "authorProfileKey": {
-      "type": "string"
-    },
     "oppKey": {
       "type": "string"
     },
@@ -13,7 +10,6 @@
     }
   },
   "required": [
-    "authorProfileKey",
     "oppKey",
     "teamKey"
   ],

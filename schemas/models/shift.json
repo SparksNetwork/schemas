@@ -17,7 +17,7 @@
     "ownerProfileKey": {
       "type": "string"
     },
-    "peope": {
+    "people": {
       "type": "number"
     },
     "reserved": {
@@ -36,7 +36,7 @@
     "end",
     "hours",
     "ownerProfileKey",
-    "peope",
+    "people",
     "start",
     "teamKey"
   ],

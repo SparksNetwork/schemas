@@ -16,7 +16,6 @@
     }
   },
   "required": [
-    "description",
     "name",
     "ownerProfileKey"
   ],

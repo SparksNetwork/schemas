@@ -2,7 +2,7 @@
   "id": "Opp",
   "type": "object",
   "properties": {
-    "authorProfileKey": {
+    "ownerProfileKey": {
       "type": "string"
     },
     "confirmationsOn": {
@@ -25,7 +25,7 @@
     }
   },
   "required": [
-    "authorProfileKey",
+    "ownerProfileKey",
     "confirmationsOn",
     "description",
     "isPublic",

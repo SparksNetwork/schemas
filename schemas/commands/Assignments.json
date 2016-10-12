@@ -1,0 +1,90 @@
+{
+  "create": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "Assignments.create",
+    "type": "object",
+    "properties": {
+      "values": {
+        "properties": {
+          "engagementKey": {
+            "type": "string"
+          },
+          "oppKey": {
+            "type": "string"
+          },
+          "profileKey": {
+            "type": "string"
+          },
+          "shiftKey": {
+            "type": "string"
+          },
+          "teamKey": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "required": [
+          "engagementKey",
+          "oppKey",
+          "profileKey",
+          "shiftKey",
+          "teamKey"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "values"
+    ],
+    "additionalProperties": false
+  },
+  "update": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "Assignments.update",
+    "type": "object",
+    "properties": {
+      "key": {
+        "type": "string"
+      },
+      "values": {
+        "properties": {
+          "engagementKey": {
+            "type": "string"
+          },
+          "oppKey": {
+            "type": "string"
+          },
+          "profileKey": {
+            "type": "string"
+          },
+          "shiftKey": {
+            "type": "string"
+          },
+          "teamKey": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "key",
+      "values"
+    ]
+  },
+  "remove": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "id": "Assignments.remove",
+    "properties": {
+      "key": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "key"
+    ],
+    "additionalProperties": false
+  }
+}

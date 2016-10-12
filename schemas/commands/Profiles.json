@@ -1,0 +1,78 @@
+{
+  "create": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "Profiles.create",
+    "type": "object",
+    "properties": {
+      "values": {
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "intro": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "portraitUrl": {
+            "type": "boolean"
+          },
+          "skills": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "values"
+    ],
+    "additionalProperties": false
+  },
+  "update": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "Profiles.update",
+    "type": "object",
+    "properties": {
+      "key": {
+        "type": "string"
+      },
+      "values": {
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "intro": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "portraitUrl": {
+            "type": "boolean"
+          },
+          "skills": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "key",
+      "values"
+    ]
+  }
+}
