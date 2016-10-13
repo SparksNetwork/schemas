@@ -626,6 +626,15 @@ declare module 'sparks-schemas/types/commands/TeamsUpdate' {
 	}
 
 }
+declare module 'sparks-schemas/types/data' {
+	export interface Data {
+	    domain: string;
+	    action: "create" | "update" | "remove";
+	    key: string;
+	    values?: Object;
+	}
+
+}
 declare module 'sparks-schemas/types/models/arrival' {
 	export interface Arrival {
 	    arrivedAt?: number;
