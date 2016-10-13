@@ -1,6 +1,6 @@
 {
   "name": "sparks-schemas",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.d.ts",
   "typings": "index.d.ts",
