@@ -10,7 +10,9 @@ function command(name) {
     }
     const [domain, action] = name.split('.');
     const payloadSchema = require(`./schemas/commands/${domain}.json`);
+    delete payloadSchema.id;
     const schema = JSON.parse(JSON.stringify(commandSchema));
+    schema.id = id;
     schema.properties.action = {
         type: "string",
         enum: [action]
