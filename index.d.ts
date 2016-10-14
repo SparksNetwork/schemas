@@ -1,3 +1,11 @@
+declare module 'sparks-schemas/generator' {
+	export function command(name: string): Function;
+
+}
+declare module 'sparks-schemas/index' {
+	export * from 'sparks-schemas/generator';
+
+}
 declare module 'sparks-schemas/types/command' {
 	export interface Command {
 	    domain: string;
