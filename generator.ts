@@ -19,7 +19,7 @@ export function command(name:string):Function {
     enum: [action]
   };
   schema.required.push('payload');
-  schema.properties.payload.$ref = '#/definitions/payload';
+  schema.properties.payload = {"$ref": '#/definitions/payload'};
   schema.definitions = {
     payload: payloadSchema[action]
   };
