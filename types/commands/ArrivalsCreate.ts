@@ -1,6 +1,5 @@
 export interface ArrivalsCreatePayload {
   values: {
-    arrivedAt: number;
     profileKey: string;
     projectKey: string;
   };

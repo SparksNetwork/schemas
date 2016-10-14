@@ -18,7 +18,6 @@ declare module 'sparks-schemas/types/command' {
 declare module 'sparks-schemas/types/commands/ArrivalsCreate' {
 	export interface ArrivalsCreatePayload {
 	    values: {
-	        arrivedAt: number;
 	        profileKey: string;
 	        projectKey: string;
 	    };

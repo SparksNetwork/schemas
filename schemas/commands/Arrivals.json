@@ -7,9 +7,6 @@
       "values": {
         "type": "object",
         "properties": {
-          "arrivedAt": {
-            "type": "number"
-          },
           "profileKey": {
             "type": "string"
           },
@@ -17,7 +14,7 @@
             "type": "string"
           }
         },
-        "required": ["arrivedAt", "profileKey", "projectKey"],
+        "required": ["profileKey", "projectKey"],
         "additionalProperties": false
       }
     },
