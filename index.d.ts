@@ -653,6 +653,17 @@ declare module 'sparks-schemas/types/data' {
 	}
 
 }
+declare module 'sparks-schemas/types/email' {
+	export interface Email {
+	    templateId: string;
+	    fromEmail?: string;
+	    fromName?: string;
+	    toEmail: string;
+	    subject?: string;
+	    substitution?: Object;
+	}
+
+}
 declare module 'sparks-schemas/types/models/arrival' {
 	export interface Arrival {
 	    arrivedAt?: number;

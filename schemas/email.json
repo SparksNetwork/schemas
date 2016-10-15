@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "id": "email",
+  "title": "email",
+  "properties": {
+    "templateId": {
+      "type": "string"
+    },
+    "fromEmail": {
+      "type": "string",
+      "format": "email"
+    },
+    "fromName": {
+      "type": "string"
+    },
+    "toEmail": {
+      "type": "string",
+      "format": "email"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "substitution": {
+      "type": "object",
+      "patternProperties": {
+        "^-.+-$": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "templateId",
+    "toEmail"
+  ],
+  "additionalProperties": false
+}
