@@ -12,6 +12,7 @@ declare module 'sparks-schemas/types/command' {
 	    action: string;
 	    uid: string;
 	    payload: any;
+	    key?: string;
 	}
 
 }

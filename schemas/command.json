@@ -7,7 +7,8 @@
     "domain": { "type": "string" },
     "action": { "type": "string" },
     "uid": { "type": "string" },
-    "payload": { "type": "object" }
+    "payload": { "type": "object" },
+    "key": { "type": "string" }
   },
   "required": [
     "domain", "action", "uid"
