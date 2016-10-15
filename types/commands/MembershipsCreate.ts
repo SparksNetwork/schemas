@@ -7,8 +7,8 @@ export interface MembershipsCreatePayload {
   };
 }
 export interface MembershipsCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Memberships";
+  action: "create";
   uid: string;
   payload: MembershipsCreatePayload;
 }

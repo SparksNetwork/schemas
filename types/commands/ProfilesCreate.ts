@@ -9,8 +9,8 @@ export interface ProfilesCreatePayload {
   };
 }
 export interface ProfilesCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Profiles";
+  action: "create";
   uid: string;
   payload: ProfilesCreatePayload;
 }

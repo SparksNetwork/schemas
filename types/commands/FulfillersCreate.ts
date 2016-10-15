@@ -5,8 +5,8 @@ export interface FulfillersCreatePayload {
   };
 }
 export interface FulfillersCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Fulfillers";
+  action: "create";
   uid: string;
   payload: FulfillersCreatePayload;
 }

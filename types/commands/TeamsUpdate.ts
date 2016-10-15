@@ -7,8 +7,8 @@ export interface TeamsUpdatePayload {
   };
 }
 export interface TeamsUpdateCommand {
-  domain: string;
-  action: string;
+  domain: "Teams";
+  action: "update";
   uid: string;
   payload: TeamsUpdatePayload;
 }

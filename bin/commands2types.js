@@ -13,11 +13,21 @@ function fileErr(filename, err) {
 }
 
 function convertCommand(filename, command) {
+  const domain = command.id.split('.')[0];
+  const action = command.id.split('.').slice(-1)[0];
   const baseId = command.id.replace(/\.(.)/g, p => p[1].toUpperCase());
   commandSchema.id = baseId + 'Command';
   commandSchema.properties.payload['$ref'] = '#/definitions/' + baseId + 'Payload';
   commandSchema.definitions[baseId + 'Payload'] = command;
   delete command.id;
+  commandSchema.properties.action = {
+    type: "string",
+    enum: [action]
+  };
+  commandSchema.properties.domain = {
+    type: "string",
+    enum: [domain]
+  };
 
   const ts = compile(commandSchema, filename + '/' + command.id);
   const targetFilename = baseId + '.ts';

@@ -10,8 +10,8 @@ export interface ProfilesUpdatePayload {
   };
 }
 export interface ProfilesUpdateCommand {
-  domain: string;
-  action: string;
+  domain: "Profiles";
+  action: "update";
   uid: string;
   payload: ProfilesUpdatePayload;
 }

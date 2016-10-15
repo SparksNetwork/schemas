@@ -2,8 +2,8 @@ export interface ProjectImagesRemovePayload {
   key: string;
 }
 export interface ProjectImagesRemoveCommand {
-  domain: string;
-  action: string;
+  domain: "ProjectImages";
+  action: "remove";
   uid: string;
   payload: ProjectImagesRemovePayload;
 }

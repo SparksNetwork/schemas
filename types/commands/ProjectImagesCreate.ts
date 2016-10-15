@@ -5,8 +5,8 @@ export interface ProjectImagesCreatePayload {
   };
 }
 export interface ProjectImagesCreateCommand {
-  domain: string;
-  action: string;
+  domain: "ProjectImages";
+  action: "create";
   uid: string;
   payload: ProjectImagesCreatePayload;
 }

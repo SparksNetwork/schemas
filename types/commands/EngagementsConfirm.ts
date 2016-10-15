@@ -2,8 +2,8 @@ export interface EngagementsConfirmPayload {
   key: string;
 }
 export interface EngagementsConfirmCommand {
-  domain: string;
-  action: string;
+  domain: "Engagements";
+  action: "confirm";
   uid: string;
   payload: EngagementsConfirmPayload;
 }

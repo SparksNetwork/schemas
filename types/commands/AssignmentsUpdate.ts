@@ -9,8 +9,8 @@ export interface AssignmentsUpdatePayload {
   };
 }
 export interface AssignmentsUpdateCommand {
-  domain: string;
-  action: string;
+  domain: "Assignments";
+  action: "update";
   uid: string;
   payload: AssignmentsUpdatePayload;
 }

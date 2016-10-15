@@ -9,8 +9,8 @@ export interface OppsCreatePayload {
   };
 }
 export interface OppsCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Opps";
+  action: "create";
   uid: string;
   payload: OppsCreatePayload;
 }

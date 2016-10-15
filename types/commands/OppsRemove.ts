@@ -2,8 +2,8 @@ export interface OppsRemovePayload {
   key: string;
 }
 export interface OppsRemoveCommand {
-  domain: string;
-  action: string;
+  domain: "Opps";
+  action: "remove";
   uid: string;
   payload: OppsRemovePayload;
 }

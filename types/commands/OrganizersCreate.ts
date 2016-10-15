@@ -9,8 +9,8 @@ export interface OrganizersCreatePayload {
   };
 }
 export interface OrganizersCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Organizers";
+  action: "create";
   uid: string;
   payload: OrganizersCreatePayload;
 }

@@ -2,8 +2,8 @@ export interface TeamsRemovePayload {
   key: string;
 }
 export interface TeamsRemoveCommand {
-  domain: string;
-  action: string;
+  domain: "Teams";
+  action: "remove";
   uid: string;
   payload: TeamsRemovePayload;
 }

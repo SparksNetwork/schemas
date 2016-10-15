@@ -2,8 +2,8 @@ export interface FulfillersRemovePayload {
   key: string;
 }
 export interface FulfillersRemoveCommand {
-  domain: string;
-  action: string;
+  domain: "Fulfillers";
+  action: "remove";
   uid: string;
   payload: FulfillersRemovePayload;
 }

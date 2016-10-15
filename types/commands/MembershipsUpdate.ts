@@ -9,8 +9,8 @@ export interface MembershipsUpdatePayload {
   };
 }
 export interface MembershipsUpdateCommand {
-  domain: string;
-  action: string;
+  domain: "Memberships";
+  action: "update";
   uid: string;
   payload: MembershipsUpdatePayload;
 }

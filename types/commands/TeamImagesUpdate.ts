@@ -5,8 +5,8 @@ export interface TeamImagesUpdatePayload {
   };
 }
 export interface TeamImagesUpdateCommand {
-  domain: string;
-  action: string;
+  domain: "TeamImages";
+  action: "update";
   uid: string;
   payload: TeamImagesUpdatePayload;
 }

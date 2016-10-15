@@ -5,8 +5,8 @@ export interface EngagementsCreatePayload {
   };
 }
 export interface EngagementsCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Engagements";
+  action: "create";
   uid: string;
   payload: EngagementsCreatePayload;
 }

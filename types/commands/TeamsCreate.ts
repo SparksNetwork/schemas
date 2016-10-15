@@ -7,8 +7,8 @@ export interface TeamsCreatePayload {
   };
 }
 export interface TeamsCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Teams";
+  action: "create";
   uid: string;
   payload: TeamsCreatePayload;
 }

@@ -2,8 +2,8 @@ export interface OrganizersRemovePayload {
   key: string;
 }
 export interface OrganizersRemoveCommand {
-  domain: string;
-  action: string;
+  domain: "Organizers";
+  action: "remove";
   uid: string;
   payload: OrganizersRemovePayload;
 }

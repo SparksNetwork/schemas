@@ -7,8 +7,8 @@ export interface ProjectsUpdatePayload {
   };
 }
 export interface ProjectsUpdateCommand {
-  domain: string;
-  action: string;
+  domain: "Projects";
+  action: "update";
   uid: string;
   payload: ProjectsUpdatePayload;
 }

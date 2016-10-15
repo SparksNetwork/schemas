@@ -10,8 +10,8 @@ export interface ShiftsCreatePayload {
   };
 }
 export interface ShiftsCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Shifts";
+  action: "create";
   uid: string;
   payload: ShiftsCreatePayload;
 }

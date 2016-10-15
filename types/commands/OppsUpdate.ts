@@ -9,8 +9,8 @@ export interface OppsUpdatePayload {
   };
 }
 export interface OppsUpdateCommand {
-  domain: string;
-  action: string;
+  domain: "Opps";
+  action: "update";
   uid: string;
   payload: OppsUpdatePayload;
 }

@@ -8,8 +8,8 @@ export interface AssignmentsCreatePayload {
   };
 }
 export interface AssignmentsCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Assignments";
+  action: "create";
   uid: string;
   payload: AssignmentsCreatePayload;
 }

@@ -2,8 +2,8 @@ export interface ShiftsRemovePayload {
   key: string;
 }
 export interface ShiftsRemoveCommand {
-  domain: string;
-  action: string;
+  domain: "Shifts";
+  action: "remove";
   uid: string;
   payload: ShiftsRemovePayload;
 }

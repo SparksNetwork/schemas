@@ -5,8 +5,8 @@ export interface ArrivalsCreatePayload {
   };
 }
 export interface ArrivalsCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Arrivals";
+  action: "create";
   uid: string;
   payload: ArrivalsCreatePayload;
 }

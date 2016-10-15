@@ -23,8 +23,8 @@ declare module 'sparks-schemas/types/commands/ArrivalsCreate' {
 	    };
 	}
 	export interface ArrivalsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Arrivals";
+	    action: "create";
 	    uid: string;
 	    payload: ArrivalsCreatePayload;
 	}
@@ -35,8 +35,8 @@ declare module 'sparks-schemas/types/commands/ArrivalsRemove' {
 	    key: string;
 	}
 	export interface ArrivalsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Arrivals";
+	    action: "remove";
 	    uid: string;
 	    payload: ArrivalsRemovePayload;
 	}
@@ -53,8 +53,8 @@ declare module 'sparks-schemas/types/commands/AssignmentsCreate' {
 	    };
 	}
 	export interface AssignmentsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Assignments";
+	    action: "create";
 	    uid: string;
 	    payload: AssignmentsCreatePayload;
 	}
@@ -65,8 +65,8 @@ declare module 'sparks-schemas/types/commands/AssignmentsRemove' {
 	    key: string;
 	}
 	export interface AssignmentsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Assignments";
+	    action: "remove";
 	    uid: string;
 	    payload: AssignmentsRemovePayload;
 	}
@@ -84,8 +84,8 @@ declare module 'sparks-schemas/types/commands/AssignmentsUpdate' {
 	    };
 	}
 	export interface AssignmentsUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Assignments";
+	    action: "update";
 	    uid: string;
 	    payload: AssignmentsUpdatePayload;
 	}
@@ -110,8 +110,8 @@ declare module 'sparks-schemas/types/commands/CommitmentsCreate' {
 	    };
 	}
 	export interface CommitmentsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Commitments";
+	    action: "create";
 	    uid: string;
 	    payload: CommitmentsCreatePayload;
 	}
@@ -122,8 +122,8 @@ declare module 'sparks-schemas/types/commands/CommitmentsRemove' {
 	    key: string;
 	}
 	export interface CommitmentsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Commitments";
+	    action: "remove";
 	    uid: string;
 	    payload: CommitmentsRemovePayload;
 	}
@@ -147,8 +147,8 @@ declare module 'sparks-schemas/types/commands/CommitmentsUpdate' {
 	    };
 	}
 	export interface CommitmentsUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Commitments";
+	    action: "update";
 	    uid: string;
 	    payload: CommitmentsUpdatePayload;
 	}
@@ -159,8 +159,8 @@ declare module 'sparks-schemas/types/commands/EngagementsConfirm' {
 	    key: string;
 	}
 	export interface EngagementsConfirmCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Engagements";
+	    action: "confirm";
 	    uid: string;
 	    payload: EngagementsConfirmPayload;
 	}
@@ -174,8 +174,8 @@ declare module 'sparks-schemas/types/commands/EngagementsCreate' {
 	    };
 	}
 	export interface EngagementsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Engagements";
+	    action: "create";
 	    uid: string;
 	    payload: EngagementsCreatePayload;
 	}
@@ -189,8 +189,8 @@ declare module 'sparks-schemas/types/commands/EngagementsPay' {
 	    };
 	}
 	export interface EngagementsPayCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Engagements";
+	    action: "pay";
 	    uid: string;
 	    payload: EngagementsPayPayload;
 	}
@@ -201,8 +201,8 @@ declare module 'sparks-schemas/types/commands/EngagementsRemove' {
 	    key: string;
 	}
 	export interface EngagementsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Engagements";
+	    action: "remove";
 	    uid: string;
 	    payload: EngagementsRemovePayload;
 	}
@@ -222,8 +222,8 @@ declare module 'sparks-schemas/types/commands/EngagementsUpdate' {
 	    };
 	}
 	export interface EngagementsUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Engagements";
+	    action: "update";
 	    uid: string;
 	    payload: EngagementsUpdatePayload;
 	}
@@ -237,8 +237,8 @@ declare module 'sparks-schemas/types/commands/FulfillersCreate' {
 	    };
 	}
 	export interface FulfillersCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Fulfillers";
+	    action: "create";
 	    uid: string;
 	    payload: FulfillersCreatePayload;
 	}
@@ -249,8 +249,8 @@ declare module 'sparks-schemas/types/commands/FulfillersRemove' {
 	    key: string;
 	}
 	export interface FulfillersRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Fulfillers";
+	    action: "remove";
 	    uid: string;
 	    payload: FulfillersRemovePayload;
 	}
@@ -266,8 +266,8 @@ declare module 'sparks-schemas/types/commands/MembershipsCreate' {
 	    };
 	}
 	export interface MembershipsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Memberships";
+	    action: "create";
 	    uid: string;
 	    payload: MembershipsCreatePayload;
 	}
@@ -278,8 +278,8 @@ declare module 'sparks-schemas/types/commands/MembershipsRemove' {
 	    key: string;
 	}
 	export interface MembershipsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Memberships";
+	    action: "remove";
 	    uid: string;
 	    payload: MembershipsRemovePayload;
 	}
@@ -297,8 +297,8 @@ declare module 'sparks-schemas/types/commands/MembershipsUpdate' {
 	    };
 	}
 	export interface MembershipsUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Memberships";
+	    action: "update";
 	    uid: string;
 	    payload: MembershipsUpdatePayload;
 	}
@@ -316,8 +316,8 @@ declare module 'sparks-schemas/types/commands/OppsCreate' {
 	    };
 	}
 	export interface OppsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Opps";
+	    action: "create";
 	    uid: string;
 	    payload: OppsCreatePayload;
 	}
@@ -328,8 +328,8 @@ declare module 'sparks-schemas/types/commands/OppsRemove' {
 	    key: string;
 	}
 	export interface OppsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Opps";
+	    action: "remove";
 	    uid: string;
 	    payload: OppsRemovePayload;
 	}
@@ -347,8 +347,8 @@ declare module 'sparks-schemas/types/commands/OppsUpdate' {
 	    };
 	}
 	export interface OppsUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Opps";
+	    action: "update";
 	    uid: string;
 	    payload: OppsUpdatePayload;
 	}
@@ -359,8 +359,8 @@ declare module 'sparks-schemas/types/commands/OrganizersAccept' {
 	    key: string;
 	}
 	export interface OrganizersAcceptCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Organizers";
+	    action: "accept";
 	    uid: string;
 	    payload: OrganizersAcceptPayload;
 	}
@@ -378,8 +378,8 @@ declare module 'sparks-schemas/types/commands/OrganizersCreate' {
 	    };
 	}
 	export interface OrganizersCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Organizers";
+	    action: "create";
 	    uid: string;
 	    payload: OrganizersCreatePayload;
 	}
@@ -390,8 +390,8 @@ declare module 'sparks-schemas/types/commands/OrganizersRemove' {
 	    key: string;
 	}
 	export interface OrganizersRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Organizers";
+	    action: "remove";
 	    uid: string;
 	    payload: OrganizersRemovePayload;
 	}
@@ -409,8 +409,8 @@ declare module 'sparks-schemas/types/commands/ProfilesCreate' {
 	    };
 	}
 	export interface ProfilesCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Profiles";
+	    action: "create";
 	    uid: string;
 	    payload: ProfilesCreatePayload;
 	}
@@ -429,8 +429,8 @@ declare module 'sparks-schemas/types/commands/ProfilesUpdate' {
 	    };
 	}
 	export interface ProfilesUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Profiles";
+	    action: "update";
 	    uid: string;
 	    payload: ProfilesUpdatePayload;
 	}
@@ -444,8 +444,8 @@ declare module 'sparks-schemas/types/commands/ProjectImagesCreate' {
 	    };
 	}
 	export interface ProjectImagesCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "ProjectImages";
+	    action: "create";
 	    uid: string;
 	    payload: ProjectImagesCreatePayload;
 	}
@@ -456,8 +456,8 @@ declare module 'sparks-schemas/types/commands/ProjectImagesRemove' {
 	    key: string;
 	}
 	export interface ProjectImagesRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "ProjectImages";
+	    action: "remove";
 	    uid: string;
 	    payload: ProjectImagesRemovePayload;
 	}
@@ -472,8 +472,8 @@ declare module 'sparks-schemas/types/commands/ProjectsCreate' {
 	    };
 	}
 	export interface ProjectsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Projects";
+	    action: "create";
 	    uid: string;
 	    payload: ProjectsCreatePayload;
 	}
@@ -484,8 +484,8 @@ declare module 'sparks-schemas/types/commands/ProjectsRemove' {
 	    key: string;
 	}
 	export interface ProjectsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Projects";
+	    action: "remove";
 	    uid: string;
 	    payload: ProjectsRemovePayload;
 	}
@@ -501,8 +501,8 @@ declare module 'sparks-schemas/types/commands/ProjectsUpdate' {
 	    };
 	}
 	export interface ProjectsUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Projects";
+	    action: "update";
 	    uid: string;
 	    payload: ProjectsUpdatePayload;
 	}
@@ -521,8 +521,8 @@ declare module 'sparks-schemas/types/commands/ShiftsCreate' {
 	    };
 	}
 	export interface ShiftsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Shifts";
+	    action: "create";
 	    uid: string;
 	    payload: ShiftsCreatePayload;
 	}
@@ -533,8 +533,8 @@ declare module 'sparks-schemas/types/commands/ShiftsRemove' {
 	    key: string;
 	}
 	export interface ShiftsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Shifts";
+	    action: "remove";
 	    uid: string;
 	    payload: ShiftsRemovePayload;
 	}
@@ -553,8 +553,8 @@ declare module 'sparks-schemas/types/commands/ShiftsUpdate' {
 	    };
 	}
 	export interface ShiftsUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Shifts";
+	    action: "update";
 	    uid: string;
 	    payload: ShiftsUpdatePayload;
 	}
@@ -565,8 +565,8 @@ declare module 'sparks-schemas/types/commands/TeamImagesRemove' {
 	    key: string;
 	}
 	export interface TeamImagesRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "TeamImages";
+	    action: "remove";
 	    uid: string;
 	    payload: TeamImagesRemovePayload;
 	}
@@ -580,8 +580,8 @@ declare module 'sparks-schemas/types/commands/TeamImagesUpdate' {
 	    };
 	}
 	export interface TeamImagesUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "TeamImages";
+	    action: "update";
 	    uid: string;
 	    payload: TeamImagesUpdatePayload;
 	}
@@ -597,8 +597,8 @@ declare module 'sparks-schemas/types/commands/TeamsCreate' {
 	    };
 	}
 	export interface TeamsCreateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Teams";
+	    action: "create";
 	    uid: string;
 	    payload: TeamsCreatePayload;
 	}
@@ -609,8 +609,8 @@ declare module 'sparks-schemas/types/commands/TeamsRemove' {
 	    key: string;
 	}
 	export interface TeamsRemoveCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Teams";
+	    action: "remove";
 	    uid: string;
 	    payload: TeamsRemovePayload;
 	}
@@ -626,8 +626,8 @@ declare module 'sparks-schemas/types/commands/TeamsUpdate' {
 	    };
 	}
 	export interface TeamsUpdateCommand {
-	    domain: string;
-	    action: string;
+	    domain: "Teams";
+	    action: "update";
 	    uid: string;
 	    payload: TeamsUpdatePayload;
 	}

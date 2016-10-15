@@ -11,8 +11,8 @@ export interface EngagementsUpdatePayload {
   };
 }
 export interface EngagementsUpdateCommand {
-  domain: string;
-  action: string;
+  domain: "Engagements";
+  action: "update";
   uid: string;
   payload: EngagementsUpdatePayload;
 }

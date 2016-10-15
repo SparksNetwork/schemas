@@ -16,8 +16,8 @@ export interface CommitmentsCreatePayload {
   };
 }
 export interface CommitmentsCreateCommand {
-  domain: string;
-  action: string;
+  domain: "Commitments";
+  action: "create";
   uid: string;
   payload: CommitmentsCreatePayload;
 }

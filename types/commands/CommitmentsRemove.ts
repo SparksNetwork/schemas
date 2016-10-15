@@ -2,8 +2,8 @@ export interface CommitmentsRemovePayload {
   key: string;
 }
 export interface CommitmentsRemoveCommand {
-  domain: string;
-  action: string;
+  domain: "Commitments";
+  action: "remove";
   uid: string;
   payload: CommitmentsRemovePayload;
 }
