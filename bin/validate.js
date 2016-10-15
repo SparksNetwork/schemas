@@ -85,17 +85,22 @@ const validateCommandSchema = decount(tryErr(parsed(function(filename, schema) {
   }
 })));
 
-fs.readdir('schemas/models', (err, files) => {
-  if (err) { return exitErr(err); }
-  left += files.length;
+function validateNormalSchemas(path) {
+  fs.readdir(path, (err, files) => {
+    if (err) { return exitErr(err); }
+    left += files.length;
 
-  files.forEach(file => {
-    fs.readFile('schemas/models/' + file, (err, data) => {
-      if (err) { return exitErr(err); }
-      validateSchema('schemas/models/' + file, data);
+    files.forEach(file => {
+      fs.readFile(path + '/' + file, (err, data) => {
+        if (err) { return exitErr(err); }
+        validateSchema(path + '/' + file, data);
+      })
     })
-  })
-});
+  });
+}
+
+validateNormalSchemas('schemas/models');
+validateNormalSchemas('schemas/data');
 
 fs.readdir('schemas/commands', (err, files) => {
   if (err) { return exitErr(err); }

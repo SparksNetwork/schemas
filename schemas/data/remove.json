@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "id": "data",
+  "title": "data",
+  "properties": {
+    "domain": { "type": "string" },
+    "action": {
+      "type": "string",
+      "enum": [ "remove" ]
+    },
+    "key": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "domain", "action", "key"
+  ],
+  "additionalProperties": false
+}
