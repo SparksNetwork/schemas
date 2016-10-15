@@ -38,42 +38,6 @@
     ],
     "additionalProperties": false
   },
-  "update": {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "Assignments.update",
-    "type": "object",
-    "properties": {
-      "key": {
-        "type": "string"
-      },
-      "values": {
-        "properties": {
-          "engagementKey": {
-            "type": "string"
-          },
-          "oppKey": {
-            "type": "string"
-          },
-          "profileKey": {
-            "type": "string"
-          },
-          "shiftKey": {
-            "type": "string"
-          },
-          "teamKey": {
-            "type": "string"
-          }
-        },
-        "type": "object",
-        "additionalProperties": false
-      }
-    },
-    "required": [
-      "key",
-      "values"
-    ],
-    "additionalProperties": false
-  },
   "remove": {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",

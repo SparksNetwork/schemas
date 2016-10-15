@@ -3,10 +3,10 @@ import * as Ajv from 'ajv';
 const ajv = Ajv();
 const commandSchema = require('./schemas/command.json');
 
-export function command(name:string):Function {
+export function command(name:string):(data:any) => boolean | Promise<boolean> {
   const id = `command.${name}`;
   const existing = ajv.getSchema(id);
-  if (existing) { return existing; }
+  if (existing) { return existing as any; }
 
   const [domain, action] = name.split('.');
   const payloadSchema = require(`./schemas/commands/${domain}.json`);
@@ -16,7 +16,7 @@ export function command(name:string):Function {
   schema.id = id;
   schema.properties.action = {
     type: "string",
-    enum: [action]
+    "enum": [action]
   };
   schema.required.push('payload');
   schema.properties.payload = {"$ref": '#/definitions/payload'};
@@ -25,5 +25,5 @@ export function command(name:string):Function {
   };
 
   ajv.addSchema(schema, id);
-  return ajv.getSchema(id);
+  return ajv.getSchema(id) as any;
 }

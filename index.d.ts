@@ -1,5 +1,5 @@
 declare module 'sparks-schemas/generator' {
-	export function command(name: string): Function;
+	export function command(name: string): (data: any) => boolean | Promise<boolean>;
 
 }
 declare module 'sparks-schemas/index' {
@@ -85,8 +85,8 @@ declare module 'sparks-schemas/types/commands/AssignmentsUpdate' {
 	    };
 	}
 	export interface AssignmentsUpdateCommand {
-	    domain: "Assignments";
-	    action: "update";
+	    domain: string;
+	    action: string;
 	    uid: string;
 	    payload: AssignmentsUpdatePayload;
 	}
