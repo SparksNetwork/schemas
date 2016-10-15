@@ -1,6 +1,8 @@
 import * as Ajv from 'ajv';
 
-const ajv = Ajv();
+const ajv = Ajv({
+  coerceTypes: true
+});
 const commandSchema = require('./schemas/command.json');
 
 export function command(name:string):(data:any) => boolean | Promise<boolean> {

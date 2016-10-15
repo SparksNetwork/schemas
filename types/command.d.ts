@@ -3,4 +3,5 @@ export interface Command {
     action: string;
     uid: string;
     payload: any;
+    key?: string;
 }
