@@ -5,7 +5,7 @@ export interface Profile {
   isAdmin: boolean;
   isConfirmed: boolean;
   phone: string;
-  portraitUrl: boolean;
+  portraitUrl: string;
   skills: string;
   uid: string;
   isEAP?: boolean;

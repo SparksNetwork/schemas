@@ -19,7 +19,7 @@
             "type": "string"
           },
           "portraitUrl": {
-            "type": "boolean"
+            "type": "string"
           },
           "skills": {
             "type": "string"
@@ -60,7 +60,7 @@
             "type": "string"
           },
           "portraitUrl": {
-            "type": "boolean"
+            "type": "string"
           },
           "skills": {
             "type": "string"

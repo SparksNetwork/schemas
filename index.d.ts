@@ -404,7 +404,7 @@ declare module 'sparks-schemas/types/commands/ProfilesCreate' {
 	        fullName?: string;
 	        intro?: string;
 	        phone?: string;
-	        portraitUrl?: boolean;
+	        portraitUrl?: string;
 	        skills?: string;
 	    };
 	}
@@ -424,7 +424,7 @@ declare module 'sparks-schemas/types/commands/ProfilesUpdate' {
 	        fullName?: string;
 	        intro?: string;
 	        phone?: string;
-	        portraitUrl?: boolean;
+	        portraitUrl?: string;
 	        skills?: string;
 	    };
 	}
@@ -821,7 +821,7 @@ declare module 'sparks-schemas/types/models/profile' {
 	    isAdmin: boolean;
 	    isConfirmed: boolean;
 	    phone: string;
-	    portraitUrl: boolean;
+	    portraitUrl: string;
 	    skills: string;
 	    uid: string;
 	    isEAP?: boolean;

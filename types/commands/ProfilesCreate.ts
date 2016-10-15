@@ -4,7 +4,7 @@ export interface ProfilesCreatePayload {
     fullName?: string;
     intro?: string;
     phone?: string;
-    portraitUrl?: boolean;
+    portraitUrl?: string;
     skills?: string;
   };
 }
