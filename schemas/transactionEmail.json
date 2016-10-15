@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "id": "email",
-  "title": "email",
+  "id": "transactionEmail",
+  "title": "TransactionEmail",
   "properties": {
     "templateId": {
       "type": "string"

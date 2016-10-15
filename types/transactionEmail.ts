@@ -1,4 +1,4 @@
-export interface Email {
+export interface TransactionEmail {
   templateId: string;
   fromEmail?: string;
   fromName?: string;
