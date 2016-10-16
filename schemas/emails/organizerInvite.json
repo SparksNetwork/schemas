@@ -4,7 +4,8 @@
   "properties": {
     "templateId": {
       "type": "string",
-      "enum": ["a005f2a2-74b0-42f4-8ac6-46a4b137b7f1"]
+      "enum": ["a005f2a2-74b0-42f4-8ac6-46a4b137b7f1"],
+      "default": "a005f2a2-74b0-42f4-8ac6-46a4b137b7f1"
     },
     "substitutions": {
       "type": "object",
