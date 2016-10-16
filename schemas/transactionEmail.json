@@ -4,9 +4,6 @@
   "id": "transactionEmail",
   "title": "TransactionEmail",
   "properties": {
-    "templateId": {
-      "type": "string"
-    },
     "fromEmail": {
       "type": "string",
       "format": "email"
@@ -17,23 +14,12 @@
     "toEmail": {
       "type": "string",
       "format": "email"
-    },
-    "subject": {
-      "type": "string"
-    },
-    "substitution": {
-      "type": "object",
-      "patternProperties": {
-        "^-.+-$": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": false
     }
   },
-  "required": [
-    "templateId",
-    "toEmail"
+  "oneOf": [
+    {"$ref": "emails.accepted"}
   ],
-  "additionalProperties": false
+  "required": [
+    "toEmail"
+  ]
 }

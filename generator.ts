@@ -1,4 +1,6 @@
 import * as Ajv from 'ajv';
+import * as fs from 'fs';
+import * as path from 'path';
 
 const ajv = Ajv({
   coerceTypes: true
@@ -28,4 +30,38 @@ export function command(name:string):(data:any) => boolean | Promise<boolean> {
 
   ajv.addSchema(schema, id);
   return ajv.getSchema(id) as any;
+}
+
+function readAllJsonFilesAtPath(filePath):Promise<any[]> {
+  return new Promise((resolve, reject) => {
+    fs.readdir(filePath, (err, files) => {
+      if (err) { return reject(err); }
+
+      Promise.all(
+        files.map(file => new Promise((resolve, reject) => {
+          fs.stat(path.join(filePath, file), (err, stats) => {
+            if (err) { return reject(err); }
+            if (stats.isDirectory()) { return resolve(null); }
+
+            fs.readFile(path.join(filePath, file), (err, data) => {
+              if (err) { return reject(err); }
+              resolve(JSON.parse(data as any));
+            });
+          });
+        }))
+      )
+      .then(data => data.filter(Boolean))
+      .then(resolve);
+    })
+  });
+}
+
+export async function email() {
+  const ajv = Ajv();
+  ajv.addSchema(require('./schemas/transactionEmail.json'));
+
+  await readAllJsonFilesAtPath(path.join(__dirname, 'schemas/emails'))
+    .then(files => files.forEach(file => ajv.addSchema(file)));
+
+  return ajv.getSchema('transactionEmail');
 }

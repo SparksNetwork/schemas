@@ -1,5 +1,7 @@
 declare module 'sparks-schemas/generator' {
+	import * as Ajv from 'ajv';
 	export function command(name: string): (data: any) => boolean | Promise<boolean>;
+	export function email(): Promise<Ajv.ValidateFunction>;
 
 }
 declare module 'sparks-schemas/index' {
@@ -653,6 +655,19 @@ declare module 'sparks-schemas/types/data' {
 	}
 
 }
+declare module 'sparks-schemas/types/emails/accepted' {
+	export interface EmailsAccepted {
+	    templateId: "dec62dab-bf8e-4000-975a-0ef6b264dafe";
+	    substitutions: {
+	        username: string;
+	        opp_name: string;
+	        project_name: string;
+	        engagementUrl: string;
+	    };
+	    [k: string]: any;
+	}
+
+}
 declare module 'sparks-schemas/types/models/arrival' {
 	export interface Arrival {
 	    arrivedAt?: number;
@@ -886,12 +901,10 @@ declare module 'sparks-schemas/types/models/teamimage' {
 }
 declare module 'sparks-schemas/types/transactionEmail' {
 	export interface TransactionEmail {
-	    templateId: string;
 	    fromEmail?: string;
 	    fromName?: string;
 	    toEmail: string;
-	    subject?: string;
-	    substitution?: Object;
+	    [k: string]: any;
 	}
 
 }

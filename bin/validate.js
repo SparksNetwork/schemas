@@ -85,31 +85,48 @@ const validateCommandSchema = decount(tryErr(parsed(function(filename, schema) {
   }
 })));
 
+function validateCommandSchemaFile(path) {
+  left += 1;
+
+  fs.readFile(path, (err, data) => {
+    if (err) { return exitErr(err); }
+    validateCommandSchema(path, data);
+  });
+}
+
+function validateSchemaFile(path) {
+  left += 1;
+
+  fs.readFile(path, (err, data) => {
+    if (err) { return exitErr(err); }
+    validateSchema(path, data);
+  });
+}
+
 function validateNormalSchemas(path) {
   fs.readdir(path, (err, files) => {
     if (err) { return exitErr(err); }
-    left += files.length;
 
     files.forEach(file => {
-      fs.readFile(path + '/' + file, (err, data) => {
-        if (err) { return exitErr(err); }
-        validateSchema(path + '/' + file, data);
-      })
+      validateSchemaFile(path + '/' + file);
     })
   });
 }
 
-validateNormalSchemas('schemas/models');
-validateNormalSchemas('schemas/data');
+function validateCommandSchemas(path) {
+  fs.readdir(path, (err, files) => {
+    if (err) { return exitErr(err); }
 
-fs.readdir('schemas/commands', (err, files) => {
-  if (err) { return exitErr(err); }
-  left += files.length;
-
-  files.forEach(file => {
-    fs.readFile('schemas/commands/' + file, (err, data) => {
-      if (err) { return exitErr(err); }
-      validateCommandSchema('schemas/commands/' + file, data);
+    files.forEach(file => {
+      validateCommandSchemaFile(path + '/' + file);
     });
   });
-});
+}
+
+validateSchemaFile('schemas/command.json');
+validateSchemaFile('schemas/data.json');
+validateSchemaFile('schemas/transactionEmail.json');
+validateNormalSchemas('schemas/emails');
+validateNormalSchemas('schemas/models');
+validateNormalSchemas('schemas/data');
+validateCommandSchemas('schemas/commands');
