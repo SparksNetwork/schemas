@@ -17,7 +17,8 @@
     }
   },
   "oneOf": [
-    {"$ref": "emails.accepted"}
+    {"$ref": "emails.accepted"},
+    {"$ref": "emails.organizerInvite"}
   ],
   "required": [
     "toEmail"

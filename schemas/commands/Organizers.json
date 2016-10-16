@@ -7,7 +7,8 @@
       "values": {
         "properties": {
           "authority": {
-            "type": "string"
+            "type": "string",
+            "enum": ["organizer"]
           },
           "inviteEmail": {
             "type": "string"
