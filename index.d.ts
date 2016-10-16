@@ -75,25 +75,6 @@ declare module 'sparks-schemas/types/commands/AssignmentsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/AssignmentsUpdate' {
-	export interface AssignmentsUpdatePayload {
-	    key: string;
-	    values: {
-	        engagementKey?: string;
-	        oppKey?: string;
-	        profileKey?: string;
-	        shiftKey?: string;
-	        teamKey?: string;
-	    };
-	}
-	export interface AssignmentsUpdateCommand {
-	    domain: string;
-	    action: string;
-	    uid: string;
-	    payload: AssignmentsUpdatePayload;
-	}
-
-}
 declare module 'sparks-schemas/types/commands/CommitmentsCreate' {
 	export interface CommitmentsCreatePayload {
 	    values: {
@@ -375,9 +356,6 @@ declare module 'sparks-schemas/types/commands/OrganizersCreate' {
 	        authority: string;
 	        inviteEmail: string;
 	        projectKey: string;
-	        acceptedAt?: number;
-	        isAccepted?: boolean;
-	        profileKey?: string;
 	    };
 	}
 	export interface OrganizersCreateCommand {

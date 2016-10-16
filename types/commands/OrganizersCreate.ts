@@ -3,9 +3,6 @@ export interface OrganizersCreatePayload {
     authority: string;
     inviteEmail: string;
     projectKey: string;
-    acceptedAt?: number;
-    isAccepted?: boolean;
-    profileKey?: string;
   };
 }
 export interface OrganizersCreateCommand {

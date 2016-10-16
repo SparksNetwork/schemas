@@ -14,15 +14,6 @@
           },
           "projectKey": {
             "type": "string"
-          },
-          "acceptedAt": {
-            "type": "number"
-          },
-          "isAccepted": {
-            "type": "boolean"
-          },
-          "profileKey": {
-            "type": "string"
           }
         },
         "type": "object",
