@@ -2,5 +2,8 @@ export interface TransactionEmail {
   fromEmail?: string;
   fromName?: string;
   toEmail: string;
-  [k: string]: any;
+  templateId: string;
+  substitutions: {
+    [key:string]:string;
+  };
 }

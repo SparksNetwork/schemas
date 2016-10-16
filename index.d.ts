@@ -906,7 +906,10 @@ declare module 'sparks-schemas/types/transactionEmail' {
 	    fromEmail?: string;
 	    fromName?: string;
 	    toEmail: string;
-	    [k: string]: any;
+	    templateId: string;
+	    substitutions: {
+	        [key: string]: string;
+	    };
 	}
 
 }
