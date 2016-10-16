@@ -614,6 +614,21 @@ declare module 'sparks-schemas/types/commands/TeamsUpdate' {
 	}
 
 }
+declare module 'sparks-schemas/types/commands/UsersMigrate' {
+	export interface UsersMigratePayload {
+	    fromUid: string;
+	    toUid: string;
+	    profileKey: string;
+	}
+	export interface UsersMigrateCommand {
+	    domain: "Users";
+	    action: "migrate";
+	    uid: string;
+	    payload: UsersMigratePayload;
+	    key?: string;
+	}
+
+}
 declare module 'sparks-schemas/types/data' {
 	export interface Data {
 	    domain: string;
