@@ -14,12 +14,14 @@ export interface Commitment {
   maxLength?: number;
 }
 
-export interface PaymentCommitment extends Commitment {
+export interface PaymentCommitment {
+  oppKey: string;
   code: 'payment';
   amount: number;
 }
 
-export interface DepositCommitment extends Commitment {
+export interface DepositCommitment {
+  oppKey: string;
   code: 'deposit';
   amount: number;
 }
