@@ -1,6 +1,7 @@
 declare module 'sparks-schemas/generator' {
 	import * as Ajv from 'ajv';
 	export function command(name: string): (data: any) => boolean | Promise<boolean>;
+	export function data(domainAction: string): (data: any) => boolean | Promise<boolean>;
 	export function email(): Promise<Ajv.ValidateFunction>;
 
 }

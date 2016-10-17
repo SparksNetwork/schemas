@@ -2,12 +2,13 @@ import * as Ajv from 'ajv';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const ajv = Ajv({
-  coerceTypes: true
-});
 const commandSchema = require('./schemas/command.json');
+const dataSchema = require('./schemas/data.json');
 
 export function command(name:string):(data:any) => boolean | Promise<boolean> {
+  const ajv = Ajv({
+    coerceTypes: true
+  });
   const id = `command.${name}`;
   const existing = ajv.getSchema(id);
   if (existing) { return existing as any; }
@@ -30,6 +31,20 @@ export function command(name:string):(data:any) => boolean | Promise<boolean> {
 
   ajv.addSchema(schema, id);
   return ajv.getSchema(id) as any;
+}
+
+export function data(domainAction:string):(data:any) => boolean | Promise<boolean> {
+  const [domain, action] = domainAction.split('.');
+  const ajv = Ajv();
+
+  const id = `data.${domainAction}`;
+
+  const schema = JSON.parse(JSON.stringify(dataSchema));
+  schema.properties.domain.enum = [domain];
+  schema.properties.action.enum = [action];
+
+  ajv.addSchema(schema, id);
+  return ajv.getSchema(id) as any
 }
 
 function readAllJsonFilesAtPath(filePath):Promise<any[]> {

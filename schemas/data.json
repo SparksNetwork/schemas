@@ -17,7 +17,8 @@
       "type": "string"
     },
     "values": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": true
     }
   },
   "required": [
