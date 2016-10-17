@@ -838,6 +838,14 @@ declare module 'sparks-schemas/types/models/organizer' {
 	}
 
 }
+declare module 'sparks-schemas/types/models/paymentDue' {
+	export interface PaymentDue {
+	    payment: number;
+	    deposit: number;
+	    payable: number;
+	}
+
+}
 declare module 'sparks-schemas/types/models/profile' {
 	export interface Profile {
 	    email: string;
