@@ -719,6 +719,14 @@ declare module 'sparks-schemas/types/models/commitment' {
 	    minLength?: number;
 	    maxLength?: number;
 	}
+	export interface PaymentCommitment extends Commitment {
+	    code: 'payment';
+	    amount: number;
+	}
+	export interface DepositCommitment extends Commitment {
+	    code: 'deposit';
+	    amount: number;
+	}
 
 }
 declare module 'sparks-schemas/types/models/creditcard' {
