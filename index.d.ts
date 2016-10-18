@@ -1,12 +1,33 @@
-declare module 'sparks-schemas/generator' {
-	import * as Ajv from 'ajv';
-	export function command(name: string): (data: any) => boolean | Promise<boolean>;
-	export function data(domainAction: string): (data: any) => boolean | Promise<boolean>;
-	export function email(): Promise<Ajv.ValidateFunction>;
+declare module 'sparks-schemas/generators/command' {
+	/**
+	 * Generate a schema validator for a given command. The domain action should be
+	 * in the format 'Domain.action'
+	 *
+	 * @param domainAction
+	 * @returns {boolean | Promise<boolean>}
+	 */
+	export function command(domainAction: string): (data: any) => boolean | Promise<boolean>;
 
 }
-declare module 'sparks-schemas/index' {
-	export * from 'sparks-schemas/generator';
+declare module 'sparks-schemas/generators/data' {
+	/**
+	 * Create a data schema validator from the given domain action. The domain action
+	 * should be in the format 'Domain.action'
+	 *
+	 * @param domainAction
+	 * @returns {boolean | Promise<boolean>}
+	 */
+	export function data(domainAction: string): (data: any) => boolean | Promise<boolean>;
+
+}
+declare module 'sparks-schemas/generators/email' {
+	import * as Ajv from 'ajv';
+	/**
+	 * Generate a schema validator for emails.
+	 *
+	 * @returns {ValidateFunction}
+	 */
+	export function email(): Promise<Ajv.ValidateFunction>;
 
 }
 declare module 'sparks-schemas/types/command' {
