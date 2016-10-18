@@ -755,16 +755,18 @@ declare module 'sparks-schemas/types/models/creditcard' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/engagement' {
-	export interface Payment {
-	    clientToken: string;
-	    gatewayId: string;
+declare module 'sparks-schemas/types/models/EngagementPayment' {
+	export interface EngagementPayment {
 	    transactionId?: string;
 	    subscriptionId?: string;
-	    error?: boolean;
+	    error: any;
 	    amountPaid?: string;
 	    paidAt?: number;
 	}
+
+}
+declare module 'sparks-schemas/types/models/engagement' {
+	import { EngagementPayment } from 'sparks-schemas/types/models/EngagementPayment';
 	export interface Deposit {
 	    billingDate?: string;
 	    paymentError?: string;
@@ -780,7 +782,7 @@ declare module 'sparks-schemas/types/models/engagement' {
 	    isConfirmed: boolean;
 	    isPaid: boolean;
 	    oppKey: string;
-	    payment: Payment;
+	    payment?: EngagementPayment;
 	    depositAmount?: string;
 	    isDepositPaid?: boolean;
 	    deposit?: Deposit;

@@ -36,7 +36,7 @@
     },
     "payment": {
       "type": "object",
-      "$ref": "#/definitions/payment"
+      "$ref": "EngagementPayment"
     },
     "depositAmount": {
       "type": "string"
@@ -74,43 +74,11 @@
     "isConfirmed",
     "isPaid",
     "oppKey",
-    "payment",
     "priority",
     "profileKey"
   ],
   "additionalProperties": false,
   "definitions": {
-    "payment": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "clientToken": {
-          "type": "string"
-        },
-        "gatewayId": {
-          "type": "string"
-        },
-        "transactionId": {
-          "type": "string"
-        },
-        "subscriptionId": {
-          "type": "string"
-        },
-        "error": {
-          "type": "boolean"
-        },
-        "amountPaid": {
-          "type": "string"
-        },
-        "paidAt": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "clientToken",
-        "gatewayId"
-      ]
-    },
     "deposit": {
       "type": "object",
       "additionalProperties": false,

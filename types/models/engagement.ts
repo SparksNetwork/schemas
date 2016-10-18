@@ -1,12 +1,4 @@
-export interface Payment {
-  clientToken: string;
-  gatewayId: string;
-  transactionId?: string;
-  subscriptionId?: string;
-  error?: boolean;
-  amountPaid?: string;
-  paidAt?: number;
-}
+import {EngagementPayment} from './EngagementPayment';
 export interface Deposit {
   billingDate?: string;
   paymentError?: string;
@@ -22,7 +14,7 @@ export interface Engagement {
   isConfirmed: boolean;
   isPaid: boolean;
   oppKey: string;
-  payment: Payment;
+  payment?: EngagementPayment;
   depositAmount?: string;
   isDepositPaid?: boolean;
   deposit?: Deposit;
