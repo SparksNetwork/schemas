@@ -109,5 +109,15 @@
     },
     "required": ["key", "values"],
     "additionalProperties": false
+  },
+  "reclaim": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "id": "Engagements.reclaim",
+    "properties": {
+      "key": {"type": "string"}
+    },
+    "required": ["key"],
+    "additionalProperties": false
   }
 }

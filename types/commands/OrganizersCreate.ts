@@ -1,6 +1,6 @@
 export interface OrganizersCreatePayload {
   values: {
-    authority: string;
+    authority: "organizer";
     inviteEmail: string;
     projectKey: string;
   };

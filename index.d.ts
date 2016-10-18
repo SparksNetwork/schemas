@@ -181,6 +181,18 @@ declare module 'sparks-schemas/types/commands/EngagementsPay' {
 	}
 
 }
+declare module 'sparks-schemas/types/commands/EngagementsReclaim' {
+	export interface EngagementsReclaimPayload {
+	    key: string;
+	}
+	export interface EngagementsReclaimCommand {
+	    domain: "Engagements";
+	    action: "reclaim";
+	    uid: string;
+	    payload: EngagementsReclaimPayload;
+	}
+
+}
 declare module 'sparks-schemas/types/commands/EngagementsRemove' {
 	export interface EngagementsRemovePayload {
 	    key: string;
@@ -354,7 +366,7 @@ declare module 'sparks-schemas/types/commands/OrganizersAccept' {
 declare module 'sparks-schemas/types/commands/OrganizersCreate' {
 	export interface OrganizersCreatePayload {
 	    values: {
-	        authority: string;
+	        authority: "organizer";
 	        inviteEmail: string;
 	        projectKey: string;
 	    };
@@ -626,7 +638,6 @@ declare module 'sparks-schemas/types/commands/UsersMigrate' {
 	    action: "migrate";
 	    uid: string;
 	    payload: UsersMigratePayload;
-	    key?: string;
 	}
 
 }

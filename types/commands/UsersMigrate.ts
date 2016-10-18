@@ -8,5 +8,4 @@ export interface UsersMigrateCommand {
   action: "migrate";
   uid: string;
   payload: UsersMigratePayload;
-  key?: string;
 }

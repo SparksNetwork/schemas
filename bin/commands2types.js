@@ -28,6 +28,7 @@ function convertCommand(filename, command) {
     type: "string",
     enum: [domain]
   };
+  delete commandSchema.properties.key;
 
   const ts = compile(commandSchema, filename + '/' + command.id);
   const targetFilename = baseId + '.ts';
