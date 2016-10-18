@@ -49,7 +49,6 @@
       "$ref": "#/definitions/deposit"
     },
     "paymentClientToken": {
-      "description": "deprecated",
       "type": "string"
     },
     "paymentError": {

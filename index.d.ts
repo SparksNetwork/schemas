@@ -786,9 +786,6 @@ declare module 'sparks-schemas/types/models/engagement' {
 	    depositAmount?: string;
 	    isDepositPaid?: boolean;
 	    deposit?: Deposit;
-	    /**
-	     * deprecated
-	     */
 	    paymentClientToken?: string;
 	    /**
 	     * deprecated

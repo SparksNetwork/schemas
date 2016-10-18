@@ -18,9 +18,6 @@ export interface Engagement {
   depositAmount?: string;
   isDepositPaid?: boolean;
   deposit?: Deposit;
-  /**
-   * deprecated
-   */
   paymentClientToken?: string;
   /**
    * deprecated
