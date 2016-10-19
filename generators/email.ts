@@ -35,7 +35,7 @@ export async function email() {
   const ajv = Ajv();
   ajv.addSchema(require('../schemas/transactionEmail.json'));
 
-  await readAllJsonFilesAtPath(path.join(__dirname, 'schemas/emails'))
+  await readAllJsonFilesAtPath(path.join(__dirname, '..', 'schemas/emails'))
     .then(files => files.forEach(file => ajv.addSchema(file)));
 
   return ajv.getSchema('transactionEmail');

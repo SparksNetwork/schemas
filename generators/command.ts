@@ -18,7 +18,7 @@ export function command(domainAction:string):(data:any) => boolean | Promise<boo
   if (existing) { return existing as any; }
 
   const [domain, action] = domainAction.split('.');
-  const payloadSchema = require(`./schemas/commands/${domain}.json`);
+  const payloadSchema = require(`../schemas/commands/${domain}.json`);
   delete payloadSchema.id;
 
   const schema = JSON.parse(JSON.stringify(commandSchema));
