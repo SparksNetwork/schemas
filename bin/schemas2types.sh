@@ -6,18 +6,6 @@ do
     T=$(bin/schema2type.js ${f})
     O="types/models/$N.ts"
 
-    if [[ ! -f "$O" ]]
-    then
-        echo "Converting $f"
-        ./bin/schema2type.js $f > "types/models/$N.ts"
-    else
-        echo $O
-        echo "${T}" | diff $O -
-
-        read -p "Overwrite (y/n)? " yn < /dev/tty
-        case $yn in
-            [Yy]* ) echo "${T}" > "$O";;
-            * ) echo "Skipping ${f}";;
-        esac
-    fi
+    echo "Converting $f"
+    ./bin/schema2type.js $f > "types/models/$N.ts"
 done

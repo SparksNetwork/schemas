@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "ajv": "^4.7.7",
+    "glob": "^7.1.1",
     "inflection": "^1.10.0"
   },
   "devDependencies": {

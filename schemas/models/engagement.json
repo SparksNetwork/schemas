@@ -46,7 +46,7 @@
     },
     "deposit": {
       "type": "object",
-      "$ref": "#/definitions/deposit"
+      "$ref": "EngagementDeposit"
     },
     "paymentClientToken": {
       "type": "string"
@@ -76,19 +76,5 @@
     "priority",
     "profileKey"
   ],
-  "additionalProperties": false,
-  "definitions": {
-    "deposit": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "billingDate": {
-          "type": "string"
-        },
-        "paymentError": {
-          "type": "string"
-        }
-      }
-    }
-  }
+  "additionalProperties": false
 }

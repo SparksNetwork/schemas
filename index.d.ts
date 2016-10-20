@@ -30,6 +30,17 @@ declare module 'sparks-schemas/generators/email' {
 	export function email(): Promise<Ajv.ValidateFunction>;
 
 }
+declare module 'sparks-schemas/lib/schema' {
+	export function readJsonFile(path: any, cb?: any): Promise<void | {}>;
+	export function readJsonFiles(dir: any, cb?: any): Promise<void | {}>;
+	export function propertyWithoutCustomData(property: any): any;
+	export function propertiesWithoutCustomData(properties: any): {};
+
+}
+declare module 'sparks-schemas/lib/ajv' {
+	export default function (): void;
+
+}
 declare module 'sparks-schemas/types/command' {
 	export interface Command {
 	    domain: string;
@@ -751,16 +762,6 @@ declare module 'sparks-schemas/types/models/commitment' {
 	    minLength?: number;
 	    maxLength?: number;
 	}
-	export interface PaymentCommitment {
-	    oppKey: string;
-	    code: 'payment';
-	    amount: number;
-	}
-	export interface DepositCommitment {
-	    oppKey: string;
-	    code: 'deposit';
-	    amount: number;
-	}
 
 }
 declare module 'sparks-schemas/types/models/creditcard' {
@@ -794,37 +795,6 @@ declare module 'sparks-schemas/types/models/EngagementPayment' {
 	    error: any;
 	    amountPaid?: string;
 	    paidAt?: number;
-	}
-
-}
-declare module 'sparks-schemas/types/models/engagement' {
-	import { EngagementPayment } from 'sparks-schemas/types/models/EngagementPayment';
-	export interface Deposit {
-	    billingDate?: string;
-	    paymentError?: string;
-	}
-	export interface Engagement {
-	    $key: string;
-	    answer: string;
-	    assignmentCount: number;
-	    declined: boolean;
-	    isAccepted: boolean;
-	    isApplied: boolean;
-	    isAssigned: boolean;
-	    isConfirmed: boolean;
-	    isPaid: boolean;
-	    oppKey: string;
-	    payment?: EngagementPayment;
-	    depositAmount?: string;
-	    isDepositPaid?: boolean;
-	    deposit?: Deposit;
-	    paymentClientToken?: string;
-	    /**
-	     * deprecated
-	     */
-	    paymentError?: boolean;
-	    priority: boolean;
-	    profileKey: string;
 	}
 
 }

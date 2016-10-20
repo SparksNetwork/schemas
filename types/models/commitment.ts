@@ -13,15 +13,3 @@ export interface Commitment {
   minLength?: number;
   maxLength?: number;
 }
-
-export interface PaymentCommitment {
-  oppKey: string;
-  code: 'payment';
-  amount: number;
-}
-
-export interface DepositCommitment {
-  oppKey: string;
-  code: 'deposit';
-  amount: number;
-}
