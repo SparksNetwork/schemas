@@ -38,7 +38,7 @@ declare module 'sparks-schemas/lib/schema' {
 
 }
 declare module 'sparks-schemas/lib/ajv' {
-	export default function (): void;
+	export default function (): Promise<any>;
 
 }
 declare module 'sparks-schemas/types/command' {

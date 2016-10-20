@@ -3,7 +3,7 @@ const globc = require('glob');
 import {readJsonFile} from './schema';
 
 function glob(pattern):Promise<string[]> {
-  return new Promise((reject, resolve) => {
+  return new Promise((resolve, reject) => {
     globc(pattern, function(err, files) {
       if (err) { return reject(err); }
       resolve(files);
@@ -30,10 +30,13 @@ function addSchemas(ajv, objects) {
 export default function() {
   const ajv = Ajv();
 
-    glob('schemas/**/*.json')
-      .then(files => Promise.all(
-        files.map(file => readJsonFile(file))
-      ))
-      .then(objects => addSchemas(ajv, objects))
-      .then(() => ajv);
+  return glob('schemas/**/*.json')
+    .then(files => Promise.all(
+      files.map(file => readJsonFile(file))
+    ))
+    .then(files => {
+      return files;
+    })
+    .then(objects => addSchemas(ajv, objects))
+    .then(() => ajv);
 }

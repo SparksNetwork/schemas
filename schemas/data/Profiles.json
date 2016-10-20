@@ -25,7 +25,7 @@
             "type": "string"
           },
           "fullName": {
-            "type": "string"
+            "$ref": "Profile.fullName"
           },
           "intro": {
             "type": "string"
@@ -57,10 +57,8 @@
           "fullName",
           "intro",
           "isAdmin",
-          "isConfirmed",
           "phone",
           "portraitUrl",
-          "skills",
           "uid"
         ],
         "additionalProperties": false
@@ -100,7 +98,7 @@
             "type": "string"
           },
           "fullName": {
-            "type": "string"
+            "$ref": "Profile.fullName"
           },
           "intro": {
             "type": "string"
