@@ -1,6 +1,5 @@
 "use strict";
 const Ajv = require('ajv');
-const dataSchema = require('../schemas/data.json');
 /**
  * Create a data schema validator from the given domain action. The domain action
  * should be in the format 'Domain.action'
@@ -10,12 +9,8 @@ const dataSchema = require('../schemas/data.json');
  */
 function data(domainAction) {
     const [domain, action] = domainAction.split('.');
+    const obj = require(`../schemas/data/${domain}.json`)[action];
     const ajv = Ajv();
-    const id = `data.${domainAction}`;
-    const schema = JSON.parse(JSON.stringify(dataSchema));
-    schema.properties.domain.enum = [domain];
-    schema.properties.action.enum = [action];
-    ajv.addSchema(schema, id);
-    return ajv.getSchema(id);
+    return ajv.compile(obj);
 }
 exports.data = data;

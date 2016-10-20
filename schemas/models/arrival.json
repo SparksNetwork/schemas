@@ -6,16 +6,20 @@
       "type": "number"
     },
     "ownerProfileKey": {
-      "type": "string"
+      "type": "string",
+      "update": false
     },
     "profileKey": {
-      "type": "string"
+      "type": "string",
+      "update": false
     },
     "projectKey": {
-      "type": "string"
+      "type": "string",
+      "update": false
     },
     "projectKeyProfileKey": {
-      "type": "string"
+      "type": "string",
+      "update": false
     }
   },
   "required": [

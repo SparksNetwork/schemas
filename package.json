@@ -5,18 +5,21 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "build": "tsc && node_modules/.bin/dts-generator --out index.d.ts --project ./ --name sparks-schemas --exclude \"typings/**/*.ts\" --exclude \"node_modules/**/*.ts\"",
+    "schemas:data": "rm -rf schemas/data/* && bin/dataFromModels.js",
+    "dts": "tsc && node_modules/.bin/dts-generator --out index.d.ts --project ./ --name sparks-schemas --exclude \"typings/**/*.ts\" --exclude \"node_modules/**/*.ts\"",
+    "build": "npm run schemas:data && npm run dts",
     "test": "node bin/validate.js"
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run build && git add index.d.ts"
+      "pre-commit": "npm run build && git add index.d.ts && git add schemas/data"
     }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ajv": "^4.7.7"
+    "ajv": "^4.7.7",
+    "inflection": "^1.10.0"
   },
   "devDependencies": {
     "cli-color": "^1.1.0",

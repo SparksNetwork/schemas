@@ -1,0 +1,10 @@
+{
+  "id": "Notification",
+  "title": "Notification",
+  "properties": {
+    "type": { "type": "string" },
+    "sendAt": { "type": "number" }
+  },
+  "required": ["type"],
+  "additionalProperties": true
+}
