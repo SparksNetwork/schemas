@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+/**
+ * Generate a schema file for each data operation for each model
+ */
+
 const fs = require('fs');
 const readJsonFiles = require('../lib/schema').readJsonFiles;
 const propertiesWithoutCustomData = require('../lib/schema').propertiesWithoutCustomData;
