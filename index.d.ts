@@ -855,6 +855,14 @@ declare module 'sparks-schemas/types/models/membership' {
 	}
 
 }
+declare module 'sparks-schemas/types/models/notification' {
+	export interface Notification {
+	    type: string;
+	    sendAt?: number;
+	    [k: string]: any;
+	}
+
+}
 declare module 'sparks-schemas/types/models/opp' {
 	export interface Opp {
 	    ownerProfileKey: string;
