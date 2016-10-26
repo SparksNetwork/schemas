@@ -36,7 +36,6 @@
   "required": [
     "email",
     "fullName",
-    "intro",
     "isAdmin",
     "phone",
     "portraitUrl",
