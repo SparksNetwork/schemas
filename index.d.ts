@@ -1,3 +1,8 @@
+declare module 'sparks-schemas/lib/ajv' {
+	import ajv = require("ajv");
+	export default function (): ajv.Ajv;
+
+}
 declare module 'sparks-schemas/generators/command' {
 	/**
 	 * Generate a schema validator for a given command. The domain action should be
@@ -10,6 +15,7 @@ declare module 'sparks-schemas/generators/command' {
 
 }
 declare module 'sparks-schemas/generators/data' {
+	import { ValidateFunction } from 'ajv';
 	/**
 	 * Create a data schema validator from the given domain action. The domain action
 	 * should be in the format 'Domain.action'
@@ -17,7 +23,7 @@ declare module 'sparks-schemas/generators/data' {
 	 * @param domainAction
 	 * @returns {boolean | Promise<boolean>}
 	 */
-	export function data(domainAction: string): (data: any) => boolean | Promise<boolean>;
+	export function data(domainAction: string): ValidateFunction;
 
 }
 declare module 'sparks-schemas/generators/email' {
@@ -31,14 +37,11 @@ declare module 'sparks-schemas/generators/email' {
 
 }
 declare module 'sparks-schemas/lib/schema' {
+	export function allSchemas(cb: any): void;
 	export function readJsonFile(path: any, cb?: any): Promise<void | {}>;
 	export function readJsonFiles(dir: any, cb?: any): Promise<void | {}>;
 	export function propertyWithoutCustomData(property: any): any;
 	export function propertiesWithoutCustomData(properties: any): {};
-
-}
-declare module 'sparks-schemas/lib/ajv' {
-	export default function (): Promise<any>;
 
 }
 declare module 'sparks-schemas/types/command' {

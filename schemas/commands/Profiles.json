@@ -10,7 +10,7 @@
             "type": "string"
           },
           "fullName": {
-            "type": "string"
+            "type": "object"
           },
           "intro": {
             "type": "string"

@@ -1,6 +1,10 @@
 import * as Ajv from 'ajv';
+import ajv from '../lib/ajv';
+const existing = ajv();
 
-const commandSchema = require('../schemas/command.json');
+function deepClone(schema) {
+  return JSON.parse(JSON.stringify(schema));
+}
 
 /**
  * Generate a schema validator for a given command. The domain action should be
@@ -10,15 +14,16 @@ const commandSchema = require('../schemas/command.json');
  * @returns {boolean | Promise<boolean>}
  */
 export function command(domainAction:string):(data:any) => boolean | Promise<boolean> {
+  const [domain, action] = domainAction.split('.');
+
   const ajv = Ajv({
     coerceTypes: true
   });
-  const id = `command.${domainAction}`;
-  const existing = ajv.getSchema(id);
-  if (existing) { return existing as any; }
 
-  const [domain, action] = domainAction.split('.');
-  const payloadSchema = require(`../schemas/commands/${domain}.json`);
+  const commandSchema = deepClone(existing.getSchema('Command').schema);
+  const payloadSchema = deepClone(existing.getSchema(domainAction).schema);
+
+  const id = `command.${domainAction}`;
   delete payloadSchema.id;
 
   const schema = JSON.parse(JSON.stringify(commandSchema));

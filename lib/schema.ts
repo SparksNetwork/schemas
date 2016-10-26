@@ -1,5 +1,32 @@
 const fs = require('fs');
 const path = require('path');
+import * as glob from 'glob';
+import * as async from 'async';
+
+export function allSchemas(cb) {
+  async.waterfall([
+    async.apply(glob, 'schemas/**/*.json'),
+    function(files, cb) {
+      async.map(files, fs.readFile, cb);
+    },
+    function(buffers, cb) {
+      async.map(buffers, async.asyncify(JSON.parse) as any, cb)
+    },
+    function(objects, cb) {
+      cb(null,
+        objects.reduce(function (acc, object) {
+          if (!object['type']) {
+            Object.keys(object).map(key => object[key])
+              .forEach(i => acc.push(i));
+          } else {
+            acc.push(object);
+          }
+          return acc;
+        }, [])
+      );
+    },
+  ], cb);
+}
 
 export function readJsonFile(path, cb?) {
   return new Promise((resolve, reject) => {

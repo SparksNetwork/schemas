@@ -1,1 +1,2 @@
-export default function (): Promise<any>;
+import ajv = require("ajv");
+export default function (): ajv.Ajv;

@@ -1,4 +1,6 @@
-import * as Ajv from 'ajv';
+import existing from '../lib/ajv';
+import {ValidateFunction} from 'ajv';
+const ajv = existing();
 
 /**
  * Create a data schema validator from the given domain action. The domain action
@@ -7,10 +9,6 @@ import * as Ajv from 'ajv';
  * @param domainAction
  * @returns {boolean | Promise<boolean>}
  */
-export function data(domainAction:string):(data:any) => boolean | Promise<boolean> {
-  const [domain, action] = domainAction.split('.');
-  const obj = require(`../schemas/data/${domain}.json`)[action];
-
-  const ajv = Ajv();
-  return ajv.compile(obj) as any;
+export function data(domainAction:string):ValidateFunction {
+  return ajv.getSchema(`data.${domainAction}`);
 }
