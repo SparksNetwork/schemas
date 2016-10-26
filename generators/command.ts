@@ -20,13 +20,12 @@ export function command(domainAction:string):(data:any) => boolean | Promise<boo
     coerceTypes: true
   });
 
-  const commandSchema = deepClone(existing.getSchema('Command').schema);
+  const schema = deepClone(existing.getSchema('Command').schema);
   const payloadSchema = deepClone(existing.getSchema(domainAction).schema);
 
   const id = `command.${domainAction}`;
   delete payloadSchema.id;
 
-  const schema = JSON.parse(JSON.stringify(commandSchema));
   schema.id = id;
   schema.properties.action = {
     type: "string",
@@ -35,7 +34,7 @@ export function command(domainAction:string):(data:any) => boolean | Promise<boo
   schema.required.push('payload');
   schema.properties.payload = {"$ref": '#/definitions/payload'};
   schema.definitions = {
-    payload: payloadSchema[action]
+    payload: payloadSchema
   };
 
   ajv.addSchema(schema, id);
