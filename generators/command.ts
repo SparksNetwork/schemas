@@ -1,6 +1,6 @@
-import * as Ajv from 'ajv';
-import ajv from '../lib/ajv';
-const existing = ajv();
+import Ajv from '../lib/ajv';
+import {ValidateFunction} from 'ajv';
+const ajv = Ajv();
 
 function deepClone(schema) {
   return JSON.parse(JSON.stringify(schema));
@@ -13,18 +13,17 @@ function deepClone(schema) {
  * @param domainAction
  * @returns {boolean | Promise<boolean>}
  */
-export function command(domainAction:string):(data:any) => boolean | Promise<boolean> {
+export function command(domainAction:string):ValidateFunction {
   const [domain, action] = domainAction.split('.');
 
-  const ajv = Ajv({
-    coerceTypes: true
-  });
-
-  const schema = deepClone(existing.getSchema('Command').schema);
-  const payloadSchema = deepClone(existing.getSchema(domainAction).schema);
-
   const id = `command.${domainAction}`;
-  delete payloadSchema.id;
+  try {
+    const existing = ajv.getSchema(id);
+    if (existing) { return existing; }
+  } catch(error) {
+  }
+
+  const schema = deepClone(ajv.getSchema('Command').schema);
 
   schema.id = id;
   schema.properties.action = {
@@ -32,12 +31,9 @@ export function command(domainAction:string):(data:any) => boolean | Promise<boo
     "enum": [action]
   };
   schema.required.push('payload');
-  schema.properties.payload = {"$ref": '#/definitions/payload'};
-  schema.definitions = {
-    payload: payloadSchema
-  };
+  schema.properties.payload = {"$ref": domainAction};
 
   ajv.addSchema(schema, id);
-  return ajv.getSchema(id) as any;
+  return ajv.getSchema(id);
 }
 

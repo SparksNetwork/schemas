@@ -4,6 +4,7 @@ declare module 'sparks-schemas/lib/ajv' {
 
 }
 declare module 'sparks-schemas/generators/command' {
+	import { ValidateFunction } from 'ajv';
 	/**
 	 * Generate a schema validator for a given command. The domain action should be
 	 * in the format 'Domain.action'
@@ -11,7 +12,7 @@ declare module 'sparks-schemas/generators/command' {
 	 * @param domainAction
 	 * @returns {boolean | Promise<boolean>}
 	 */
-	export function command(domainAction: string): (data: any) => boolean | Promise<boolean>;
+	export function command(domainAction: string): ValidateFunction;
 
 }
 declare module 'sparks-schemas/generators/data' {

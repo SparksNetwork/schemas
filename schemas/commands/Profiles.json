@@ -10,7 +10,7 @@
             "type": "string"
           },
           "fullName": {
-            "type": "object"
+            "$ref": "Profile.fullName"
           },
           "intro": {
             "type": "string"
@@ -51,7 +51,7 @@
             "type": "string"
           },
           "fullName": {
-            "type": "string"
+            "$ref": "Profile.fullName"
           },
           "intro": {
             "type": "string"

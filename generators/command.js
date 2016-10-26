@@ -1,7 +1,6 @@
 "use strict";
-const Ajv = require('ajv');
 const ajv_1 = require('../lib/ajv');
-const existing = ajv_1.default();
+const ajv = ajv_1.default();
 function deepClone(schema) {
     return JSON.parse(JSON.stringify(schema));
 }
@@ -14,23 +13,23 @@ function deepClone(schema) {
  */
 function command(domainAction) {
     const [domain, action] = domainAction.split('.');
-    const ajv = Ajv({
-        coerceTypes: true
-    });
-    const schema = deepClone(existing.getSchema('Command').schema);
-    const payloadSchema = deepClone(existing.getSchema(domainAction).schema);
     const id = `command.${domainAction}`;
-    delete payloadSchema.id;
+    try {
+        const existing = ajv.getSchema(id);
+        if (existing) {
+            return existing;
+        }
+    }
+    catch (error) {
+    }
+    const schema = deepClone(ajv.getSchema('Command').schema);
     schema.id = id;
     schema.properties.action = {
         type: "string",
         "enum": [action]
     };
     schema.required.push('payload');
-    schema.properties.payload = { "$ref": '#/definitions/payload' };
-    schema.definitions = {
-        payload: payloadSchema
-    };
+    schema.properties.payload = { "$ref": domainAction };
     ajv.addSchema(schema, id);
     return ajv.getSchema(id);
 }
