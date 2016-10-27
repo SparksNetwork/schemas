@@ -36,6 +36,11 @@ declare module 'sparks-schemas/generators/email' {
 	export function email(): any;
 
 }
+declare module 'sparks-schemas/index' {
+	import Ajv from 'sparks-schemas/lib/ajv';
+	export { Ajv };
+
+}
 declare module 'sparks-schemas/lib/schema' {
 	export function allSchemas(cb: any): void;
 	export function readJsonFile(path: any, cb?: any): any;
