@@ -31,6 +31,12 @@
     },
     "isEAP": {
       "type": "boolean"
+    },
+    "location": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "number"
     }
   },
   "required": [

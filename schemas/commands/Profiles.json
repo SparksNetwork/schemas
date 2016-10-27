@@ -23,11 +23,18 @@
           },
           "skills": {
             "type": "string"
+          },
+          "dob": {
+            "type": "number"
+          },
+          "location": {
+            "type": "string"
           }
         },
         "type": "object",
         "required": [
-          "email"
+          "email",
+          "fullName"
         ],
         "additionalProperties": false
       }
@@ -63,6 +70,12 @@
             "type": "string"
           },
           "skills": {
+            "type": "string"
+          },
+          "dob": {
+            "type": "number"
+          },
+          "location": {
             "type": "string"
           }
         },

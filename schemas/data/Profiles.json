@@ -50,6 +50,12 @@
           },
           "isEAP": {
             "type": "boolean"
+          },
+          "location": {
+            "type": "string"
+          },
+          "dob": {
+            "type": "number"
           }
         },
         "required": [
@@ -122,6 +128,12 @@
           },
           "isEAP": {
             "type": "boolean"
+          },
+          "location": {
+            "type": "string"
+          },
+          "dob": {
+            "type": "number"
           }
         },
         "additionalProperties": false
