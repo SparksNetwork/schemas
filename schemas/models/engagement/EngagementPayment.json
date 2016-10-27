@@ -11,8 +11,8 @@
       "type": "string"
     },
     "error": {
-      "oneOf": [
-        {"type": "boolean", "enum": [false]},
+      "anyOf": [
+        {"type": "boolean"},
         {"type": "string"}
       ]
     },

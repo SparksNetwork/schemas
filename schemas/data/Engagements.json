@@ -52,7 +52,6 @@
             "type": "string"
           },
           "payment": {
-            "type": "object",
             "$ref": "EngagementPayment"
           },
           "depositAmount": {
@@ -62,7 +61,6 @@
             "type": "boolean"
           },
           "deposit": {
-            "type": "object",
             "$ref": "EngagementDeposit"
           },
           "paymentClientToken": {
@@ -157,7 +155,6 @@
             "type": "string"
           },
           "payment": {
-            "type": "object",
             "$ref": "EngagementPayment"
           },
           "depositAmount": {
@@ -167,7 +164,6 @@
             "type": "boolean"
           },
           "deposit": {
-            "type": "object",
             "$ref": "EngagementDeposit"
           },
           "paymentClientToken": {
