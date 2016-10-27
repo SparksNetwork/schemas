@@ -1,38 +1,30 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments)).next());
-    });
-};
-const fs = require('fs');
-const path = require('path');
-const Ajv = require('ajv');
+var fs = require('fs');
+var path = require('path');
+var Ajv = require('ajv');
 function readAllJsonFilesAtPath(filePath) {
-    return new Promise((resolve, reject) => {
-        fs.readdir(filePath, (err, files) => {
+    return new Promise(function (resolve, reject) {
+        fs.readdir(filePath, function (err, files) {
             if (err) {
                 return reject(err);
             }
-            Promise.all(files.map(file => new Promise((resolve, reject) => {
-                fs.stat(path.join(filePath, file), (err, stats) => {
+            Promise.all(files.map(function (file) { return new Promise(function (resolve, reject) {
+                fs.stat(path.join(filePath, file), function (err, stats) {
                     if (err) {
                         return reject(err);
                     }
                     if (stats.isDirectory()) {
                         return resolve(null);
                     }
-                    fs.readFile(path.join(filePath, file), (err, data) => {
+                    fs.readFile(path.join(filePath, file), function (err, data) {
                         if (err) {
                             return reject(err);
                         }
                         resolve(JSON.parse(data));
                     });
                 });
-            })))
-                .then(data => data.filter(Boolean))
+            }); }))
+                .then(function (data) { return data.filter(Boolean); })
                 .then(resolve);
         });
     });
@@ -43,11 +35,11 @@ function readAllJsonFilesAtPath(filePath) {
  * @returns {ValidateFunction}
  */
 function email() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const ajv = Ajv();
-        ajv.addSchema(require('../schemas/transactionEmail.json'));
-        yield readAllJsonFilesAtPath(path.join(__dirname, '..', 'schemas/emails'))
-            .then(files => files.forEach(file => ajv.addSchema(file)));
+    var ajv = Ajv();
+    ajv.addSchema(require('../schemas/transactionEmail.json'));
+    return readAllJsonFilesAtPath(path.join(__dirname, '..', 'schemas/emails'))
+        .then(function (files) { return files.forEach(function (file) { return ajv.addSchema(file); }); })
+        .then(function () {
         return ajv.getSchema('transactionEmail');
     });
 }

@@ -28,19 +28,18 @@ declare module 'sparks-schemas/generators/data' {
 
 }
 declare module 'sparks-schemas/generators/email' {
-	import * as Ajv from 'ajv';
 	/**
 	 * Generate a schema validator for emails.
 	 *
 	 * @returns {ValidateFunction}
 	 */
-	export function email(): Promise<Ajv.ValidateFunction>;
+	export function email(): any;
 
 }
 declare module 'sparks-schemas/lib/schema' {
 	export function allSchemas(cb: any): void;
-	export function readJsonFile(path: any, cb?: any): Promise<void | {}>;
-	export function readJsonFiles(dir: any, cb?: any): Promise<void | {}>;
+	export function readJsonFile(path: any, cb?: any): any;
+	export function readJsonFiles(dir: any, cb?: any): any;
 	export function propertyWithoutCustomData(property: any): any;
 	export function propertiesWithoutCustomData(properties: any): {};
 

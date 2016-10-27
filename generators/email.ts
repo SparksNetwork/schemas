@@ -31,12 +31,13 @@ function readAllJsonFilesAtPath(filePath):Promise<any[]> {
  *
  * @returns {ValidateFunction}
  */
-export async function email() {
+export function email() {
   const ajv = Ajv();
   ajv.addSchema(require('../schemas/transactionEmail.json'));
 
-  await readAllJsonFilesAtPath(path.join(__dirname, '..', 'schemas/emails'))
-    .then(files => files.forEach(file => ajv.addSchema(file)));
-
-  return ajv.getSchema('transactionEmail');
+  return readAllJsonFilesAtPath(path.join(__dirname, '..', 'schemas/emails'))
+    .then(files => files.forEach(file => ajv.addSchema(file)))
+    .then(() => {
+      return ajv.getSchema('transactionEmail');
+    });
 }

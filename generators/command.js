@@ -1,6 +1,6 @@
 "use strict";
-const ajv_1 = require('../lib/ajv');
-const ajv = ajv_1.default();
+var ajv_1 = require('../lib/ajv');
+var ajv = ajv_1.default();
 function deepClone(schema) {
     return JSON.parse(JSON.stringify(schema));
 }
@@ -12,17 +12,17 @@ function deepClone(schema) {
  * @returns {boolean | Promise<boolean>}
  */
 function command(domainAction) {
-    const [domain, action] = domainAction.split('.');
-    const id = `command.${domainAction}`;
+    var _a = domainAction.split('.'), domain = _a[0], action = _a[1];
+    var id = "command." + domainAction;
     try {
-        const existing = ajv.getSchema(id);
+        var existing = ajv.getSchema(id);
         if (existing) {
             return existing;
         }
     }
     catch (error) {
     }
-    const schema = deepClone(ajv.getSchema('Command').schema);
+    var schema = deepClone(ajv.getSchema('Command').schema);
     schema.id = id;
     schema.properties.action = {
         type: "string",
