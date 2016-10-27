@@ -3,11 +3,11 @@
   "version": "2.1.2",
   "description": "",
   "main": "index.js",
-  "typings": "index.d.ts",
+  "typings": "types.d.ts",
   "scripts": {
     "schemas:data": "rm -rf schemas/data/* && bin/dataFromModels.js",
     "schemas:all": "node bin/schemas.js",
-    "dts": "tsc && node_modules/.bin/dts-generator --out index.d.ts --project ./ --name sparks-schemas --exclude \"typings/**/*.ts\" --exclude \"node_modules/**/*.ts\"",
+    "dts": "tsc && node_modules/.bin/dts-generator --out types.d.ts --project ./ --name sparks-schemas --exclude \"typings/**/*.ts\" --exclude \"node_modules/**/*.ts\" --main sparks-schemas/index",
     "build": "npm run schemas:data && npm run schemas:all && npm run dts",
     "test": "npm run schemas:all && node bin/validate.js"
   },
