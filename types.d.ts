@@ -43,6 +43,7 @@ declare module 'sparks-schemas/index' {
 }
 declare module 'sparks-schemas/lib/schema' {
 	export function allSchemas(cb: any): void;
+	export function commandSchemas(cb: any): void;
 	export function readJsonFile(path: any, cb?: any): any;
 	export function readJsonFiles(dir: any, cb?: any): any;
 	export function propertyWithoutCustomData(property: any): any;
