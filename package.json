@@ -1,6 +1,6 @@
 {
   "name": "sparks-schemas",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "",
   "main": "index.js",
   "typings": "types.d.ts",
@@ -16,7 +16,12 @@
       "pre-commit": "npm run build && git add index.d.ts && git add schemas/data && git add schemas.json"
     }
   },
-  "files": ["lib", "index.js", "index.d.ts", "types.d.ts"],
+  "files": [
+    "lib",
+    "index.js",
+    "index.d.ts",
+    "types.d.ts"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
