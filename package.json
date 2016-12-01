@@ -17,6 +17,11 @@
     }
   },
   "files": [
+    "bin",
+    "generators",
+    "schemas",
+    "typings",
+    "types",
     "lib",
     "index.js",
     "index.d.ts",
