@@ -1,6 +1,6 @@
 {
   "name": "@sparksnetwork/sparks-schemas",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "",
   "main": "index.js",
   "typings": "types.d.ts",
@@ -25,7 +25,8 @@
     "lib",
     "index.js",
     "index.d.ts",
-    "types.d.ts"
+    "types.d.ts",
+    "schemas.json"
   ],
   "author": "",
   "license": "ISC",
