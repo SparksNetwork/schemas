@@ -1,9 +1,9 @@
-declare module 'sparks-schemas/lib/ajv' {
+declare module '@sparksnetwork/sparks-schemas/lib/ajv' {
 	import ajv = require("ajv");
 	export default function (): ajv.Ajv;
 
 }
-declare module 'sparks-schemas/generators/command' {
+declare module '@sparksnetwork/sparks-schemas/generators/command' {
 	import { ValidateFunction } from 'ajv';
 	/**
 	 * Generate a schema validator for a given command. The domain action should be
@@ -15,7 +15,7 @@ declare module 'sparks-schemas/generators/command' {
 	export function command(domainAction: string): ValidateFunction;
 
 }
-declare module 'sparks-schemas/generators/data' {
+declare module '@sparksnetwork/sparks-schemas/generators/data' {
 	import { ValidateFunction } from 'ajv';
 	/**
 	 * Create a data schema validator from the given domain action. The domain action
@@ -27,7 +27,7 @@ declare module 'sparks-schemas/generators/data' {
 	export function data(domainAction: string): ValidateFunction;
 
 }
-declare module 'sparks-schemas/generators/email' {
+declare module '@sparksnetwork/sparks-schemas/generators/email' {
 	/**
 	 * Generate a schema validator for emails.
 	 *
@@ -36,12 +36,12 @@ declare module 'sparks-schemas/generators/email' {
 	export function email(): any;
 
 }
-declare module 'sparks-schemas/index' {
-	import Ajv from 'sparks-schemas/lib/ajv';
+declare module '@sparksnetwork/sparks-schemas/index' {
+	import Ajv from '@sparksnetwork/sparks-schemas/lib/ajv';
 	export { Ajv };
 
 }
-declare module 'sparks-schemas/lib/schema' {
+declare module '@sparksnetwork/sparks-schemas/lib/schema' {
 	export function allSchemas(cb: any): void;
 	export function commandSchemas(cb: any): void;
 	export function readJsonFile(path: any, cb?: any): any;
@@ -50,7 +50,7 @@ declare module 'sparks-schemas/lib/schema' {
 	export function propertiesWithoutCustomData(properties: any): {};
 
 }
-declare module 'sparks-schemas/types/command' {
+declare module '@sparksnetwork/sparks-schemas/types/command' {
 	export interface Command {
 	    domain: string;
 	    action: string;
@@ -60,7 +60,7 @@ declare module 'sparks-schemas/types/command' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ArrivalsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ArrivalsCreate' {
 	export interface ArrivalsCreatePayload {
 	    values: {
 	        profileKey: string;
@@ -75,7 +75,7 @@ declare module 'sparks-schemas/types/commands/ArrivalsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ArrivalsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ArrivalsRemove' {
 	export interface ArrivalsRemovePayload {
 	    key: string;
 	}
@@ -87,7 +87,7 @@ declare module 'sparks-schemas/types/commands/ArrivalsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/AssignmentsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/AssignmentsCreate' {
 	export interface AssignmentsCreatePayload {
 	    values: {
 	        engagementKey: string;
@@ -105,7 +105,7 @@ declare module 'sparks-schemas/types/commands/AssignmentsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/AssignmentsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/AssignmentsRemove' {
 	export interface AssignmentsRemovePayload {
 	    key: string;
 	}
@@ -117,7 +117,7 @@ declare module 'sparks-schemas/types/commands/AssignmentsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/CommitmentsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/CommitmentsCreate' {
 	export interface CommitmentsCreatePayload {
 	    values: {
 	        code: string;
@@ -143,7 +143,7 @@ declare module 'sparks-schemas/types/commands/CommitmentsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/CommitmentsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/CommitmentsRemove' {
 	export interface CommitmentsRemovePayload {
 	    key: string;
 	}
@@ -155,7 +155,7 @@ declare module 'sparks-schemas/types/commands/CommitmentsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/CommitmentsUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/CommitmentsUpdate' {
 	export interface CommitmentsUpdatePayload {
 	    key: string;
 	    values: {
@@ -180,7 +180,7 @@ declare module 'sparks-schemas/types/commands/CommitmentsUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/EngagementsConfirm' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/EngagementsConfirm' {
 	export interface EngagementsConfirmPayload {
 	    key: string;
 	}
@@ -192,7 +192,7 @@ declare module 'sparks-schemas/types/commands/EngagementsConfirm' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/EngagementsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/EngagementsCreate' {
 	export interface EngagementsCreatePayload {
 	    values: {
 	        oppKey: string;
@@ -207,7 +207,7 @@ declare module 'sparks-schemas/types/commands/EngagementsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/EngagementsPay' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/EngagementsPay' {
 	export interface EngagementsPayPayload {
 	    key: string;
 	    values: {
@@ -222,7 +222,7 @@ declare module 'sparks-schemas/types/commands/EngagementsPay' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/EngagementsReclaim' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/EngagementsReclaim' {
 	export interface EngagementsReclaimPayload {
 	    key: string;
 	}
@@ -234,7 +234,7 @@ declare module 'sparks-schemas/types/commands/EngagementsReclaim' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/EngagementsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/EngagementsRemove' {
 	export interface EngagementsRemovePayload {
 	    key: string;
 	}
@@ -246,7 +246,7 @@ declare module 'sparks-schemas/types/commands/EngagementsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/EngagementsUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/EngagementsUpdate' {
 	export interface EngagementsUpdatePayload {
 	    key: string;
 	    values: {
@@ -267,7 +267,7 @@ declare module 'sparks-schemas/types/commands/EngagementsUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/FulfillersCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/FulfillersCreate' {
 	export interface FulfillersCreatePayload {
 	    values: {
 	        oppKey: string;
@@ -282,7 +282,7 @@ declare module 'sparks-schemas/types/commands/FulfillersCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/FulfillersRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/FulfillersRemove' {
 	export interface FulfillersRemovePayload {
 	    key: string;
 	}
@@ -294,7 +294,7 @@ declare module 'sparks-schemas/types/commands/FulfillersRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/MembershipsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/MembershipsCreate' {
 	export interface MembershipsCreatePayload {
 	    values: {
 	        answer: string;
@@ -311,7 +311,7 @@ declare module 'sparks-schemas/types/commands/MembershipsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/MembershipsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/MembershipsRemove' {
 	export interface MembershipsRemovePayload {
 	    key: string;
 	}
@@ -323,7 +323,7 @@ declare module 'sparks-schemas/types/commands/MembershipsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/MembershipsUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/MembershipsUpdate' {
 	export interface MembershipsUpdatePayload {
 	    key: string;
 	    values: {
@@ -342,7 +342,7 @@ declare module 'sparks-schemas/types/commands/MembershipsUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/OppsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/OppsCreate' {
 	export interface OppsCreatePayload {
 	    values: {
 	        confirmationsOn?: boolean;
@@ -361,7 +361,7 @@ declare module 'sparks-schemas/types/commands/OppsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/OppsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/OppsRemove' {
 	export interface OppsRemovePayload {
 	    key: string;
 	}
@@ -373,7 +373,7 @@ declare module 'sparks-schemas/types/commands/OppsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/OppsUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/OppsUpdate' {
 	export interface OppsUpdatePayload {
 	    key: string;
 	    values: {
@@ -392,7 +392,7 @@ declare module 'sparks-schemas/types/commands/OppsUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/OrganizersAccept' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/OrganizersAccept' {
 	export interface OrganizersAcceptPayload {
 	    key: string;
 	}
@@ -404,7 +404,7 @@ declare module 'sparks-schemas/types/commands/OrganizersAccept' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/OrganizersCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/OrganizersCreate' {
 	export interface OrganizersCreatePayload {
 	    values: {
 	        authority: "organizer";
@@ -420,7 +420,7 @@ declare module 'sparks-schemas/types/commands/OrganizersCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/OrganizersRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/OrganizersRemove' {
 	export interface OrganizersRemovePayload {
 	    key: string;
 	}
@@ -432,7 +432,7 @@ declare module 'sparks-schemas/types/commands/OrganizersRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ProfilesCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ProfilesCreate' {
 	export interface ProfilesCreatePayload {
 	    values: {
 	        email: string;
@@ -451,7 +451,7 @@ declare module 'sparks-schemas/types/commands/ProfilesCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ProfilesUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ProfilesUpdate' {
 	export interface ProfilesUpdatePayload {
 	    key: string;
 	    values: {
@@ -471,7 +471,7 @@ declare module 'sparks-schemas/types/commands/ProfilesUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ProjectImagesCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ProjectImagesCreate' {
 	export interface ProjectImagesCreatePayload {
 	    values: {
 	        key: string;
@@ -486,7 +486,7 @@ declare module 'sparks-schemas/types/commands/ProjectImagesCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ProjectImagesRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ProjectImagesRemove' {
 	export interface ProjectImagesRemovePayload {
 	    key: string;
 	}
@@ -498,7 +498,7 @@ declare module 'sparks-schemas/types/commands/ProjectImagesRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ProjectsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ProjectsCreate' {
 	export interface ProjectsCreatePayload {
 	    values: {
 	        description?: string;
@@ -514,7 +514,7 @@ declare module 'sparks-schemas/types/commands/ProjectsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ProjectsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ProjectsRemove' {
 	export interface ProjectsRemovePayload {
 	    key: string;
 	}
@@ -526,7 +526,7 @@ declare module 'sparks-schemas/types/commands/ProjectsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ProjectsUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ProjectsUpdate' {
 	export interface ProjectsUpdatePayload {
 	    key: string;
 	    values: {
@@ -543,7 +543,7 @@ declare module 'sparks-schemas/types/commands/ProjectsUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ShiftsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ShiftsCreate' {
 	export interface ShiftsCreatePayload {
 	    values: {
 	        date: string;
@@ -563,7 +563,7 @@ declare module 'sparks-schemas/types/commands/ShiftsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ShiftsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ShiftsRemove' {
 	export interface ShiftsRemovePayload {
 	    key: string;
 	}
@@ -575,7 +575,7 @@ declare module 'sparks-schemas/types/commands/ShiftsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/ShiftsUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/ShiftsUpdate' {
 	export interface ShiftsUpdatePayload {
 	    key: string;
 	    values: {
@@ -595,7 +595,7 @@ declare module 'sparks-schemas/types/commands/ShiftsUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/TeamImagesRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/TeamImagesRemove' {
 	export interface TeamImagesRemovePayload {
 	    key: string;
 	}
@@ -607,7 +607,7 @@ declare module 'sparks-schemas/types/commands/TeamImagesRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/TeamImagesUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/TeamImagesUpdate' {
 	export interface TeamImagesUpdatePayload {
 	    key: string;
 	    values: {
@@ -622,7 +622,7 @@ declare module 'sparks-schemas/types/commands/TeamImagesUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/TeamsCreate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/TeamsCreate' {
 	export interface TeamsCreatePayload {
 	    values: {
 	        description?: string;
@@ -639,7 +639,7 @@ declare module 'sparks-schemas/types/commands/TeamsCreate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/TeamsRemove' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/TeamsRemove' {
 	export interface TeamsRemovePayload {
 	    key: string;
 	}
@@ -651,7 +651,7 @@ declare module 'sparks-schemas/types/commands/TeamsRemove' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/TeamsUpdate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/TeamsUpdate' {
 	export interface TeamsUpdatePayload {
 	    key: string;
 	    values: {
@@ -668,7 +668,7 @@ declare module 'sparks-schemas/types/commands/TeamsUpdate' {
 	}
 
 }
-declare module 'sparks-schemas/types/commands/UsersMigrate' {
+declare module '@sparksnetwork/sparks-schemas/types/commands/UsersMigrate' {
 	export interface UsersMigratePayload {
 	    fromUid: string;
 	    toUid: string;
@@ -682,7 +682,7 @@ declare module 'sparks-schemas/types/commands/UsersMigrate' {
 	}
 
 }
-declare module 'sparks-schemas/types/data' {
+declare module '@sparksnetwork/sparks-schemas/types/data' {
 	export interface Data {
 	    domain: string;
 	    action: "create" | "update" | "remove";
@@ -701,7 +701,7 @@ declare module 'sparks-schemas/types/data' {
 	}
 
 }
-declare module 'sparks-schemas/types/emails/accepted' {
+declare module '@sparksnetwork/sparks-schemas/types/emails/accepted' {
 	export interface AcceptedEmail {
 	    fromEmail?: string;
 	    fromName?: string;
@@ -716,7 +716,7 @@ declare module 'sparks-schemas/types/emails/accepted' {
 	}
 
 }
-declare module 'sparks-schemas/types/emails/organizerInvite' {
+declare module '@sparksnetwork/sparks-schemas/types/emails/organizerInvite' {
 	export interface OrganizerInviteEmail {
 	    fromEmail?: string;
 	    fromName?: string;
@@ -729,7 +729,7 @@ declare module 'sparks-schemas/types/emails/organizerInvite' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/arrival' {
+declare module '@sparksnetwork/sparks-schemas/types/models/arrival' {
 	export interface Arrival {
 	    arrivedAt?: number;
 	    ownerProfileKey: string;
@@ -739,7 +739,7 @@ declare module 'sparks-schemas/types/models/arrival' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/assignment' {
+declare module '@sparksnetwork/sparks-schemas/types/models/assignment' {
 	export interface Assignment {
 	    engagementKey: string;
 	    oppKey: string;
@@ -749,13 +749,13 @@ declare module 'sparks-schemas/types/models/assignment' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/billing' {
+declare module '@sparksnetwork/sparks-schemas/types/models/billing' {
 	export interface Billing {
 	    postalCode: number;
 	}
 
 }
-declare module 'sparks-schemas/types/models/commitment' {
+declare module '@sparksnetwork/sparks-schemas/types/models/commitment' {
 	export interface Commitment {
 	    code: string;
 	    oppKey: string;
@@ -773,7 +773,7 @@ declare module 'sparks-schemas/types/models/commitment' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/creditcard' {
+declare module '@sparksnetwork/sparks-schemas/types/models/creditcard' {
 	export interface CreditCard {
 	    bin: number;
 	    cardType: string;
@@ -797,7 +797,7 @@ declare module 'sparks-schemas/types/models/creditcard' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/EngagementPayment' {
+declare module '@sparksnetwork/sparks-schemas/types/models/EngagementPayment' {
 	export interface EngagementPayment {
 	    transactionId?: string;
 	    subscriptionId?: string;
@@ -807,8 +807,8 @@ declare module 'sparks-schemas/types/models/EngagementPayment' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/engagement' {
-	import { EngagementPayment } from 'sparks-schemas/types/models/EngagementPayment';
+declare module '@sparksnetwork/sparks-schemas/types/models/engagement' {
+	import { EngagementPayment } from '@sparksnetwork/sparks-schemas/types/models/EngagementPayment';
 	export interface Deposit {
 	    billingDate?: string;
 	    paymentError?: string;
@@ -838,21 +838,21 @@ declare module 'sparks-schemas/types/models/engagement' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/fulfiller' {
+declare module '@sparksnetwork/sparks-schemas/types/models/fulfiller' {
 	export interface Fulfiller {
 	    oppKey: string;
 	    teamKey: string;
 	}
 
 }
-declare module 'sparks-schemas/types/models/gatewaycustomer' {
+declare module '@sparksnetwork/sparks-schemas/types/models/gatewaycustomer' {
 	export interface GatewayCustomer {
 	    gatewayId: string;
 	    profileKey: string;
 	}
 
 }
-declare module 'sparks-schemas/types/models/membership' {
+declare module '@sparksnetwork/sparks-schemas/types/models/membership' {
 	export interface Membership {
 	    answer: string;
 	    engagementKey: string;
@@ -865,7 +865,7 @@ declare module 'sparks-schemas/types/models/membership' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/notification' {
+declare module '@sparksnetwork/sparks-schemas/types/models/notification' {
 	export interface Notification {
 	    type: string;
 	    sendAt?: number;
@@ -873,7 +873,7 @@ declare module 'sparks-schemas/types/models/notification' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/opp' {
+declare module '@sparksnetwork/sparks-schemas/types/models/opp' {
 	export interface Opp {
 	    ownerProfileKey: string;
 	    confirmationsOn: boolean;
@@ -885,7 +885,7 @@ declare module 'sparks-schemas/types/models/opp' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/organizer' {
+declare module '@sparksnetwork/sparks-schemas/types/models/organizer' {
 	export interface Organizer {
 	    authority: string;
 	    inviteEmail: string;
@@ -897,7 +897,7 @@ declare module 'sparks-schemas/types/models/organizer' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/paymentDue' {
+declare module '@sparksnetwork/sparks-schemas/types/models/paymentDue' {
 	export interface PaymentDue {
 	    payment: number;
 	    deposit: number;
@@ -905,7 +905,7 @@ declare module 'sparks-schemas/types/models/paymentDue' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/profile' {
+declare module '@sparksnetwork/sparks-schemas/types/models/profile' {
 	export interface Profile {
 	    email: string;
 	    fullName: string;
@@ -920,7 +920,7 @@ declare module 'sparks-schemas/types/models/profile' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/project' {
+declare module '@sparksnetwork/sparks-schemas/types/models/project' {
 	export interface Project {
 	    description?: string;
 	    facebookImageUrl?: string;
@@ -929,13 +929,13 @@ declare module 'sparks-schemas/types/models/project' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/projectimage' {
+declare module '@sparksnetwork/sparks-schemas/types/models/projectimage' {
 	export interface ProjectImage {
 	    dataUrl: string;
 	}
 
 }
-declare module 'sparks-schemas/types/models/shift' {
+declare module '@sparksnetwork/sparks-schemas/types/models/shift' {
 	export interface Shift {
 	    assigned: number;
 	    date: string;
@@ -949,7 +949,7 @@ declare module 'sparks-schemas/types/models/shift' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/status' {
+declare module '@sparksnetwork/sparks-schemas/types/models/status' {
 	export interface Status {
 	    amount: string;
 	    status: string;
@@ -959,7 +959,7 @@ declare module 'sparks-schemas/types/models/status' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/team' {
+declare module '@sparksnetwork/sparks-schemas/types/models/team' {
 	export interface Team {
 	    ownerProfileKey: string;
 	    description?: string;
@@ -969,13 +969,13 @@ declare module 'sparks-schemas/types/models/team' {
 	}
 
 }
-declare module 'sparks-schemas/types/models/teamimage' {
+declare module '@sparksnetwork/sparks-schemas/types/models/teamimage' {
 	export interface TeamImage {
 	    dataUrl: string;
 	}
 
 }
-declare module 'sparks-schemas/types/transactionEmail' {
+declare module '@sparksnetwork/sparks-schemas/types/transactionEmail' {
 	export interface TransactionEmail {
 	    fromEmail?: string;
 	    fromName?: string;
@@ -987,7 +987,7 @@ declare module 'sparks-schemas/types/transactionEmail' {
 	}
 
 }
-declare module 'sparks-schemas' {
-	import main = require('sparks-schemas/index');
+declare module '@sparksnetwork/sparks-schemas' {
+	import main = require('@sparksnetwork/sparks-schemas/index');
 	export = main;
 }

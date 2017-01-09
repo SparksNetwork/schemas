@@ -1,7 +1,7 @@
 "use strict";
-var fs = require('fs');
-var path = require('path');
-var Ajv = require('ajv');
+var fs = require("fs");
+var path = require("path");
+var Ajv = require("ajv");
 function readAllJsonFilesAtPath(filePath) {
     return new Promise(function (resolve, reject) {
         fs.readdir(filePath, function (err, files) {

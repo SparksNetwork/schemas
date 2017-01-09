@@ -1,5 +1,5 @@
 "use strict";
-var ajv_1 = require('../lib/ajv');
+var ajv_1 = require("../lib/ajv");
 var ajv = ajv_1.default();
 /**
  * Generate a schema validator for a given command. The domain action should be
